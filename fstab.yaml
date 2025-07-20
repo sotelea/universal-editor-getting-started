@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p131558-e1552862.adobeaemcloud.com/bin/franklin.delivery/learningeds/universal-editor-getting-started/main"
+    url: "http://localhost:4502/bin/franklin.delivery/learningeds/universal-editor-getting-started/main"
     type: "markup"
     suffix: ".html"
