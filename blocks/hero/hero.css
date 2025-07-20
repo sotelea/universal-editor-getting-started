@@ -1,41 +1,68 @@
+/* Remove default width restriction and padding from the wrapper */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
+/* Main hero container styles */
 .hero {
   position: relative;
   padding: 40px 24px;
-  min-height: 300px;
+  min-height: 400px; /* Increased height for larger background image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  overflow: hidden; /* Prevents content from overflowing */
 }
 
-.hero h1 {
-    font-size: 56px;
-        letter-spacing: -1px;
-        line-height: 1.14;
-font-family: "Noto Serif", Arial, Helvetica, sans-serif;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
+/* Image container and image setup to cover the entire hero area */
+.hero picture,
 .hero img {
-  object-fit: cover;
+  position: absolute;
+  inset: 0; /* shorthand for top, right, bottom, left: 0 */
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  z-index: -1; /* Puts image behind the text */
 }
 
+/* Main headline text styles */
+.hero h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+  line-height: 1.14;
+  font-family: "Noto Serif", Arial, Helvetica, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white; /* Ensures visibility on background image */
+}
+
+/* Optional: Paragraph text inside the hero, if any */
+.hero p {
+  max-width: 1200px;
+  margin: 16px auto 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Responsive padding for larger screens */
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
   }
 }
+
+/* Optional: Add dark overlay for better text visibility on bright images */
+/* Uncomment if needed */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: -1;
+}
+
