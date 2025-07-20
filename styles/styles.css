@@ -255,3 +255,25 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+.default-content-wrapper {
+  background-color: #085b64; /* Teal background color */
+  text-align: left;
+  padding: 60px 20px; /* Vertical and horizontal spacing */
+  color: #ffffff; /* White text */
+}
+
+.default-content-wrapper h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: "Noto Serif", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+.default-content-wrapper p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0;
+}
+
