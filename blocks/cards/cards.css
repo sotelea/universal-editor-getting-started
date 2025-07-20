@@ -1,5 +1,5 @@
 .cards {
-  background-color: #004b55; /* Deep teal background like in the screenshot */
+  background-color: #004b55; /* Matches Atlas Copco Group's theme */
   padding: 40px 20px;
 }
 
@@ -9,7 +9,7 @@
   padding: 0;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Always 3 cards */
   gap: 32px;
 }
 
