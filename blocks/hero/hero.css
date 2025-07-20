@@ -1,14 +1,12 @@
-
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
-/* Main hero styles */
-
+/* Base hero container */
 .hero {
   position: relative;
-  padding: 40px 0; /* vertical spacing */
+  padding: 40px 0;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -16,7 +14,7 @@
   overflow: hidden;
 }
 
-/* Ensure full-size background image behind the content */
+/* Background image full bleed */
 .hero picture,
 .hero img {
   position: absolute;
@@ -27,17 +25,15 @@
   z-index: -1;
 }
 
-/* Text block alignment — apply grid spacing */
+/* Grid-like control without HTML changes */
 .hero > * {
-  padding-left: 32px;
-  padding-right: 32px;
-  max-width: 1200px;
-  margin-left: auto;
+  max-width: 600px;         /* Restrict to half width */
+  margin-left: 64px;        /* Align left within grid */
   margin-right: auto;
   color: white;
 }
 
-/* Style headline */
+/* Headline styling */
 .hero h1 {
   font-size: 56px;
   letter-spacing: -1px;
@@ -46,21 +42,21 @@
   margin: 0;
 }
 
-/* Style paragraph */
+/* Paragraph styling */
 .hero p {
   font-size: 20px;
   line-height: 1.6;
   margin-top: 16px;
 }
 
-/* Responsive behavior */
+/* Responsive spacing */
 @media (width >= 900px) {
   .hero {
-    padding: 60px 0;
+    padding: 80px 0;
   }
 
   .hero > * {
-    padding-left: 64px;
-    padding-right: 64px;
+    margin-left: 120px; /* more spacious on large screens */
+    max-width: 720px;
   }
 }
