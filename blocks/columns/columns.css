@@ -20,10 +20,7 @@
   transition: background-color 0.3s ease;
 }
 
-/* First column: Careers */
-.columns.block.columns-3-cols > div > div:nth-child(1) {
-  background-color: #d2a66c;
-}
+
 
 /* Second column: Investors */
 .columns.block.columns-3-cols > div > div:nth-child(2) {
