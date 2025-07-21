@@ -39,4 +39,13 @@
       "title"
     ]
   }
+  {
+    "id": "carousel",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  }
 ]
