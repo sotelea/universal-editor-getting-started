@@ -212,10 +212,11 @@ button.secondary {
 
 main img {
   display: block;
-  width: 100%;
+  width: 100vw;  /* Full viewport width */
   height: auto;
   margin: 0;
   padding: 0;
+  object-fit: cover;
 }
 
 
