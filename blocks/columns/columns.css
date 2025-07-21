@@ -1,7 +1,7 @@
 
 .columns.block.columns-3-cols > div {
   display: flex;
-  flex-direction: column;
+  
   position: relative;
   top: -60px;
   margin: 0;
