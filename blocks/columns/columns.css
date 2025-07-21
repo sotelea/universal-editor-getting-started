@@ -1,3 +1,12 @@
+/* Container for all 3 columns */
+.columns.block.columns-3-cols > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -60px; /* overlaps banner */
+  margin: 0;
+  padding: 0;
+}
 /* Target the direct wrapper inside the columns block */
 .columns.block.columns-3-cols > div {
   display: flex;
