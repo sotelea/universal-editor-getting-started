@@ -1,39 +1,45 @@
-.columns > div {
+/* Target the direct wrapper inside the columns block */
+.columns.block.columns-3-cols > div {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 1rem;
 }
 
-.columns > div > div {
-  background-color: #d2a66c; /* Matches the tan color from screenshot */
+/* Style each card (Available jobs, Reports, Press releases) */
+.columns.block.columns-3-cols > div > div {
+  background-color: #d2a66c; /* tan color */
+  color: #003b44; /* dark teal text */
   padding: 2rem 1.5rem;
-  text-align: center;
-  flex: 1;
   border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
 }
 
-.columns > div > div h3 {
-  color: #003b44; /* Matches the dark teal text */
+/* Headings */
+.columns.block.columns-3-cols > div > div h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-}
-
-.columns > div > div p {
-  font-size: 1rem;
   color: #003b44;
-  margin: 0;
 }
 
+/* Paragraphs */
+.columns.block.columns-3-cols > div > div p {
+  font-size: 1rem;
+  margin: 0;
+  color: #003b44;
+}
+
+/* Desktop: switch to horizontal layout */
 @media (min-width: 900px) {
-  .columns > div {
+  .columns.block.columns-3-cols > div {
     flex-direction: row;
     justify-content: space-between;
     gap: 24px;
   }
 
-  .columns > div > div {
+  .columns.block.columns-3-cols > div > div {
     text-align: left;
-    height: 100%;
   }
 }
