@@ -40,7 +40,7 @@
 
 /* Hover effect */
 .columns.block.columns-3-cols > div > div:hover {
-  color: #054e5a;
+  color: #054e5a !important;
 }
 
 /* Also force the title and paragraph to update on hover */
