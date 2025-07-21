@@ -40,3 +40,77 @@
 .columns.block.columns-3-cols > div > div:hover p {
   color: #ffffff; /* keep text white on hover */
 }
+
+/* Container for the two columns */
+.columns.block.columns-2-cols > div {
+  display: flex;
+  flex-wrap: wrap;       /* wrap on small screens */
+  gap: 24px;             /* spacing between columns */
+  align-items: center;   /* vertical alignment */
+}
+
+/* Left column: text content */
+.columns.block.columns-2-cols > div > div:first-child {
+  flex: 1 1 40%;         /* grow/shrink, basis 40% width */
+  max-width: 600px;      /* optional max width */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.columns.block.columns-2-cols > div > div:first-child h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #054e5a;        /* matching your brand color */
+}
+
+.columns.block.columns-2-cols > div > div:first-child p {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  color: #3a3a3a;        /* dark gray for readability */
+  line-height: 1.5;
+}
+
+/* Button style */
+.columns.block.columns-2-cols > div > div:first-child p.button-container a.button {
+  background-color: #054e5a;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.columns.block.columns-2-cols > div > div:first-child p.button-container a.button:hover {
+  background-color: #033a43;
+}
+
+/* Right column: image */
+.columns.block.columns-2-cols > div > div.columns-img-col {
+  flex: 1 1 55%;         /* grow/shrink, basis 55% width */
+  max-width: 900px;      /* optional max width */
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 8px;    /* optional rounding */
+}
+
+.columns.block.columns-2-cols > div > div.columns-img-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+  .columns.block.columns-2-cols > div {
+    flex-direction: column;
+  }
+  .columns.block.columns-2-cols > div > div:first-child,
+  .columns.block.columns-2-cols > div > div.columns-img-col {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
