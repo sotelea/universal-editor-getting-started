@@ -1,33 +1,39 @@
 .columns > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns img {
-  width: 100%;
+  gap: 16px;
+  padding: 1rem;
 }
 
 .columns > div > div {
-  order: 1;
+  background-color: #d2a66c; /* Matches the tan color from screenshot */
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1;
+  border: 1px solid #ccc;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.columns > div > div h3 {
+  color: #003b44; /* Matches the dark teal text */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
+.columns > div > div p {
+  font-size: 1rem;
+  color: #003b44;
+  margin: 0;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
-    align-items: center;
-    flex-direction: unset;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 24px;
   }
 
   .columns > div > div {
-    flex: 1;
-    order: unset;
+    text-align: left;
+    height: 100%;
   }
 }
