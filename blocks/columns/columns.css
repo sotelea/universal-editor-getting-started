@@ -1,9 +1,9 @@
-/* Container for all 3 columns */
+/* Main container */
 .columns.block.columns-3-cols > div {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -60px; /* overlaps banner */
+  top: -60px;
   margin: 0;
   padding: 0;
   gap: 0;
@@ -19,10 +19,10 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   flex: 1;
   margin: 0;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Headings */
+/* Titles */
 .columns.block.columns-3-cols > div > div h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -38,15 +38,15 @@
   transition: color 0.3s ease;
 }
 
-/* Hover state: change color of block, title, and text */
+/* Hover effect */
 .columns.block.columns-3-cols > div > div:hover {
   color: #054e5a;
-  cursor: pointer;
 }
 
+/* Also force the title and paragraph to update on hover */
 .columns.block.columns-3-cols > div > div:hover h3,
 .columns.block.columns-3-cols > div > div:hover p {
-  color: #054e5a;
+  color: #054e5a !important;
 }
 
 /* Desktop layout */
