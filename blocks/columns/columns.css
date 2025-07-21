@@ -1,45 +1,71 @@
-/* Target the direct wrapper inside the columns block */
+/* Container for all 3 columns */
 .columns.block.columns-3-cols > div {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 1rem;
+  position: relative;
+  top: -60px; /* overlaps banner */
+  margin: 0;
+  padding: 0;
 }
 
-/* Style each card (Available jobs, Reports, Press releases) */
+/* Each card */
 .columns.block.columns-3-cols > div > div {
-  background-color: #d2a66c; /* tan color */
-  color: #003b44; /* dark teal text */
-  padding: 2rem 1.5rem;
-  border: 1px solid #ccc;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   flex: 1;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #003b44;
+  border: none;
+  margin: 0;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* First column: Careers */
+.columns.block.columns-3-cols > div > div:nth-child(1) {
+  background-color: #d2a66c;
+}
+
+/* Second column: Investors */
+.columns.block.columns-3-cols > div > div:nth-child(2) {
+  background-color: #d2a66c;
+  border-left: 1px solid #c19052;
+  border-right: 1px solid #c19052;
+}
+
+/* Third column: Media (blue gradient) */
+.columns.block.columns-3-cols > div > div:nth-child(3) {
+  background: linear-gradient(to right, #006672, #005c63);
+  color: white;
+}
+
+/* Hover Effects */
+.columns.block.columns-3-cols > div > div:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
 }
 
 /* Headings */
 .columns.block.columns-3-cols > div > div h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
-  color: #003b44;
 }
 
 /* Paragraphs */
 .columns.block.columns-3-cols > div > div p {
-  font-size: 1rem;
   margin: 0;
-  color: #003b44;
+  font-size: 1rem;
 }
 
-/* Desktop: switch to horizontal layout */
+/* Desktop layout */
 @media (min-width: 900px) {
   .columns.block.columns-3-cols > div {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 24px;
+    justify-content: stretch;
   }
 
   .columns.block.columns-3-cols > div > div {
     text-align: left;
+    height: 100%;
+    padding: 2.5rem;
   }
 }
