@@ -1,8 +1,6 @@
 
 .columns.block.columns-3-cols > div {
-  display: flex;
   
-  position: relative;
   top: -60px;
   margin: 0;
   padding: 0;
