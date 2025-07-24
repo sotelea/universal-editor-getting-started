@@ -212,8 +212,10 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      },
-      {
+      }
+    ]
+  },
+  {
     "id": "carousel",
     "fields": [
       {
@@ -235,8 +237,6 @@
         "name": "title",
         "label": "Title"
       }
-    ]
-  }
     ]
   }
 ]
