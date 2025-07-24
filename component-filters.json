@@ -48,5 +48,16 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": " custom ",
+    "components": [
+      "text",
+      "image",
+      "image",
+      "button",
+      "title"
+    ]
   }
+
 ]
