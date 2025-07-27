@@ -196,3 +196,31 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+/* Add this to your nav.css or global styles */
+
+nav#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: white; /* or your brand color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Push the page content below the nav */
+main {
+  margin-top: 80px; /* Adjust this based on your nav height */
+}
+
+/* Optional: Make text in nav readable over backgrounds */
+.nav-sections a,
+.nav-brand a {
+  color: #000; /* or any color for better contrast */
+}
+
+/* Optional: Style for active/hover links */
+.nav-sections a:hover {
+  color: #0072ce;
+}
+
