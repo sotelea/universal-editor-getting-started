@@ -1,7 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-// media query match for desktop
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
 function closeOnEscape(e) {
@@ -46,18 +45,12 @@ function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
 
-/**
- * Toggle all dropdowns in nav
- */
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
 
-/**
- * Toggle full nav menu
- */
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
@@ -90,9 +83,15 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-/**
- * Main decorate function to load and build header
- */
+// 🟢 Add header height padding after DOM is fully rendered
+function adjustBodyPaddingForFixedHeader() {
+  const header = document.querySelector('.header-wrapper');
+  if (header) {
+    const headerHeight = header.offsetHeight;
+    document.body.style.paddingTop = `${headerHeight}px`;
+  }
+}
+
 export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
@@ -109,13 +108,12 @@ export default async function decorate(block) {
     if (section) section.classList.add(`nav-${c}`);
   });
 
-  // Brand logo linking
   const navBrand = nav.querySelector('.nav-brand');
   if (navBrand) {
     const img = navBrand.querySelector('img');
     if (img) {
       const link = document.createElement('a');
-      link.href = '/'; // You can change this URL if needed
+      link.href = '/';
       link.appendChild(img.cloneNode(true));
       navBrand.innerHTML = '';
       navBrand.appendChild(link);
@@ -136,7 +134,6 @@ export default async function decorate(block) {
     });
   }
 
-  // Hamburger setup
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
@@ -146,7 +143,6 @@ export default async function decorate(block) {
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
 
-  // Initial toggle setup
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
@@ -154,4 +150,7 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // ✅ Adjust body padding to avoid header overlap
+  adjustBodyPaddingForFixedHeader();
 }
