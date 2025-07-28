@@ -47,17 +47,15 @@ function openOnKeydown(e) {
   }
 }
 // Make image in .default-content-wrapper clickable and redirect to a URL
-function makeImageLinkable() {
+function enableImageClickRedirect() {
   const wrapper = document.querySelector('.default-content-wrapper picture');
   if (wrapper) {
     const img = wrapper.querySelector('img');
     if (img) {
-      const anchor = document.createElement('a');
-      anchor.href = 'https://www.atlascopcogroup.com/en';
-      anchor.target = '_blank';
-      anchor.rel = 'noopener noreferrer';
-      img.parentNode.insertBefore(anchor, img);
-      anchor.appendChild(img);
+      img.style.cursor = 'pointer'; // show pointer cursor on hover
+      img.addEventListener('click', () => {
+        window.location.href = 'https://www.atlascopcogroup.com/en';
+      });
     }
   }
 }
