@@ -48,12 +48,15 @@ function openOnKeydown(e) {
 }
 // Make image in .default-content-wrapper clickable and redirect to a URL
 function enableImageClickRedirect() {
-  const wrapper = document.querySelector('.default-content-wrapper picture');
-  if (wrapper) {
-    const img = wrapper.querySelector('img');
-    if (img) {
-      img.style.cursor = 'pointer'; // show pointer cursor on hover
-      img.addEventListener('click', () => {
+  const picture = document.querySelector('.default-content-wrapper picture');
+  if (picture) {
+    const img = picture.querySelector('img');
+    if (img && !img.hasAttribute('data-click-listener-added')) {
+      img.style.cursor = 'pointer';
+      img.setAttribute('data-click-listener-added', 'true'); // Prevent duplicate listeners
+
+      img.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent any unexpected propagation
         window.location.href = 'https://www.atlascopcogroup.com/en';
       });
     }
@@ -124,7 +127,9 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
-makeImageLinkable();
+setTimeout(() => {
+  enableImageClickRedirect();
+}, 300);
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
