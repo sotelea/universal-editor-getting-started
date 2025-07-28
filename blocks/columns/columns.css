@@ -2,6 +2,7 @@
 .columns.block.columns-3-cols > div {
   display: flex;
   justify-content: space-between;
+    padding-top: 6rem; 
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0;
