@@ -1,15 +1,15 @@
-/* === 3 Column Flex Layout === */
+/* === Wrapper Layout === */
 .columns.block.columns-3-cols > div {
   display: flex;
   justify-content: space-between;
-    padding-top: 6rem; 
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 6rem; /* space for overlap */
   max-width: 1200px;
+  position: relative;
 }
 
-/* === Each Card === */
+/* === Common Tile Styles === */
 .columns.block.columns-3-cols > div > div {
   flex: 1 1 33.33%;
   background-color: #c3965a;
@@ -22,14 +22,28 @@
   justify-content: center;
   transition: background-color 0.3s ease;
   border-right: 1px solid #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
-/* Remove right border from last card */
+/* === Remove last border */
 .columns.block.columns-3-cols > div > div:last-child {
   border-right: none;
 }
 
-/* === Heading and Text === */
+/* === Elevated First Tile === */
+.columns.block.columns-3-cols > div > div:first-child {
+  position: absolute;
+  top: -100px; /* overlap height */
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  width: calc(100% / 3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* === Typography === */
 .columns.block.columns-3-cols > div > div h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
@@ -43,22 +57,30 @@
   margin: 0;
 }
 
-/* === Hover Style === */
+/* === Hover Effect === */
 .columns.block.columns-3-cols > div > div:hover {
   background-color: #b2813e;
   cursor: pointer;
 }
 
-/* === Responsive (Stack on small screens) === */
+/* === Responsive Stack for Mobile === */
 @media (max-width: 768px) {
   .columns.block.columns-3-cols > div {
     flex-direction: column;
+    padding-top: 2rem;
   }
 
   .columns.block.columns-3-cols > div > div {
     flex: 1 1 100%;
     border-right: none;
     border-bottom: 1px solid #ffffff;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-shadow: none;
   }
 
   .columns.block.columns-3-cols > div > div:last-child {
