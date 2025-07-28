@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "carousel","custom"
+      "carousel"
     ]
   },
   {
@@ -44,16 +44,6 @@
     "id": "carousel",
     "components": [
       "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
-    "id": " custom ",
-    "components": [
-      "text",
-      "image",
       "image",
       "button",
       "title"
