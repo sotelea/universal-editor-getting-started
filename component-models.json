@@ -238,29 +238,6 @@
         "label": "Title"
       }
     ]
-  },{
-    "id": "custom",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      }
-    ]
   }
 
 ]
