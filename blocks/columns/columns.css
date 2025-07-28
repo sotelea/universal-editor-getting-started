@@ -1,5 +1,7 @@
+/* === 3 Column Layout Styling === */
 .columns.block.columns-3-cols > div {
-     top: -60px;
+  position: relative;
+  top: -60px;
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -10,8 +12,8 @@
 /* Each card */
 .columns.block.columns-3-cols > div > div {
   flex: 1;
-  padding: 24px;      /* adjust padding */
-  height: 238px;      /* fixed height */
+  padding: 24px;
+  height: 238px;
   box-sizing: border-box;
   background-color: #d2a66c;
   border: 1px solid #ccc;
@@ -31,47 +33,56 @@
   transition: color 0.3s ease;
 }
 
-/* Hover effect: background and text color */
+/* Hover effect */
 .columns.block.columns-3-cols > div > div:hover {
   background-color: #054e5a;
-  color: #ffffff; /* white text on dark bg for contrast */
+  color: #ffffff;
 }
-
 .columns.block.columns-3-cols > div > div:hover h3,
 .columns.block.columns-3-cols > div > div:hover p {
-  color: #ffffff; /* keep text white on hover */
+  color: #ffffff;
 }
 
-/* Container for the two columns */
+/* === Lift first column over the banner === */
+.columns.block.columns-3-cols > div > div:first-child {
+  position: absolute;
+  top: -120px;           /* Moves it over the banner */
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  width: calc(100% / 3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* === 2 Column Layout Styling === */
 .columns.block.columns-2-cols > div {
   display: flex;
-  flex-wrap: wrap;       /* wrap on small screens */
-  gap: 24px;             /* spacing between columns */
-  align-items: center;   /* vertical alignment */
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
 }
 
-/* Left column: text content */
+/* Left column */
 .columns.block.columns-2-cols > div > div:first-child {
-  flex: 1 1 40%;         /* grow/shrink, basis 40% width */
-  max-width: 600px;      /* optional max width */
+  flex: 1 1 40%;
+  max-width: 600px;
   padding: 16px;
   box-sizing: border-box;
 }
-
 .columns.block.columns-2-cols > div > div:first-child h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #054e5a;        /* matching your brand color */
+  color: #054e5a;
 }
-
 .columns.block.columns-2-cols > div > div:first-child p {
   font-size: 1rem;
   margin-bottom: 1.25rem;
-  color: #3a3a3a;        /* dark gray for readability */
+  color: #3a3a3a;
   line-height: 1.5;
 }
 
-/* Button style */
+/* Button styling */
 .columns.block.columns-2-cols > div > div:first-child p.button-container a.button {
   background-color: #054e5a;
   color: white;
@@ -82,20 +93,18 @@
   display: inline-block;
   transition: background-color 0.3s ease;
 }
-
 .columns.block.columns-2-cols > div > div:first-child p.button-container a.button:hover {
   background-color: #033a43;
 }
 
-/* Right column: image */
+/* Right column (image) */
 .columns.block.columns-2-cols > div > div.columns-img-col {
-  flex: 1 1 55%;         /* grow/shrink, basis 55% width */
-  max-width: 900px;      /* optional max width */
+  flex: 1 1 55%;
+  max-width: 900px;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 8px;    /* optional rounding */
+  border-radius: 8px;
 }
-
 .columns.block.columns-2-cols > div > div.columns-img-col img {
   width: 100%;
   height: auto;
@@ -103,7 +112,7 @@
   border-radius: 8px;
 }
 
-/* Responsive: stack columns on small screens */
+/* Responsive */
 @media (max-width: 768px) {
   .columns.block.columns-2-cols > div {
     flex-direction: column;
@@ -113,5 +122,13 @@
     max-width: 100%;
     flex-basis: 100%;
   }
-}
 
+  /* Reset lifted card on mobile */
+  .columns.block.columns-3-cols > div > div:first-child {
+    position: static;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+}
