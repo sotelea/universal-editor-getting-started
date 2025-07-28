@@ -46,7 +46,21 @@ function openOnKeydown(e) {
     focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
   }
 }
-
+// Make image in .default-content-wrapper clickable and redirect to a URL
+function makeImageLinkable() {
+  const wrapper = document.querySelector('.default-content-wrapper picture');
+  if (wrapper) {
+    const img = wrapper.querySelector('img');
+    if (img) {
+      const anchor = document.createElement('a');
+      anchor.href = 'https://www.atlascopcogroup.com/en';
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+      img.parentNode.insertBefore(anchor, img);
+      anchor.appendChild(img);
+    }
+  }
+}
 function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
@@ -112,7 +126,7 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
-
+makeImageLinkable();
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
@@ -163,4 +177,5 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  
 }
