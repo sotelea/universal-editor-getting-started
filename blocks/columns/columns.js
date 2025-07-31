@@ -15,7 +15,12 @@ export default function decorate(block) {
       }
     });
   });
-   const sectionMeta = block.querySelector('div.columns-metadata');
+ block.querySelectorAll(':scope > div:not([data-columns-status])').forEach((section) => 
+    {
+ 
+
+    // Process section metadata
+    const sectionMeta = section.querySelector('div.columns-metadata');
     if (sectionMeta) {
       const meta = readBlockConfig(sectionMeta);
       Object.keys(meta).forEach((key) => {
@@ -30,5 +35,6 @@ export default function decorate(block) {
         }
       });
       sectionMeta.parentNode.remove();
-    } 
+    }
+  });
 }
