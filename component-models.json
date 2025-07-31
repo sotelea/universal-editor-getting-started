@@ -176,7 +176,8 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
-      },{
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
