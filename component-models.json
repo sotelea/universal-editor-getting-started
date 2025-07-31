@@ -134,13 +134,10 @@
         "label": "Style",
         "options": [
           {
-            "name": "RightImage",
-            "value": "rightimage"
-          },
-           {
-            "name": "leftImage",
-            "value": "leftimage"
+            "name": "Highlight",
+            "value": "highlight"
           }
+          
         ]
       }
     ]
@@ -187,8 +184,12 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight1",
-            "value": "highlight1"
+            "name": "RightImage",
+            "value": "rightimage"
+          },
+           {
+            "name": "leftImage",
+            "value": "leftimage"
           }
         ]
       }
