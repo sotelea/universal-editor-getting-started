@@ -134,8 +134,12 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "RightImage",
+            "value": "rightimage"
+          },
+           {
+            "name": "leftImage",
+            "value": "leftimage"
           }
         ]
       }
