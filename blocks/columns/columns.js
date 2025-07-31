@@ -15,4 +15,9 @@ export default function decorate(block) {
       }
     });
   });
+    const [quoteWrapper] = block.children;
+
+  const block50 = document.createElement('block50');
+  block50.textContent = quoteWrapper.textContent.trim();
+  quoteWrapper.replaceChildren(block50);
 }
