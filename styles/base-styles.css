@@ -38,6 +38,10 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* columns */
+  --column-border-radius: 20px;
+  --column-background-color: #d2a66c;
 }
 
 /* fallback fonts */
