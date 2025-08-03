@@ -6,28 +6,26 @@ footer {
 }
 
 footer .columns-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
   width: 100%;
 }
 
-footer .columns.block.columns-4-cols {
+footer .columns.block.columns-4-cols > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   width: 100%;
 }
 
-footer .columns.block.columns-4-cols > div {
+/* Each of the 4 columns */
+footer .columns.block.columns-4-cols > div > div {
   display: flex;
   flex-direction: column;
   gap: 12px;
   color: #ffffff;
 }
 
-footer .columns.block.columns-4-cols > div:first-child {
+/* Leftmost column (Contact Info Box) */
+footer .columns.block.columns-4-cols > div > div:first-child {
   background-image: url('pattern-bg.png');
   background-size: cover;
   background-position: center;
@@ -37,13 +35,13 @@ footer .columns.block.columns-4-cols > div:first-child {
   line-height: 1.7;
 }
 
-footer .columns.block.columns-4-cols > div:first-child p {
+footer .columns.block.columns-4-cols > div > div:first-child p {
   font-size: 18px;
   margin: 6px 0;
 }
 
-footer .columns.block.columns-4-cols > div:first-child svg,
-footer .columns.block.columns-4-cols > div:first-child .icon {
+footer .columns.block.columns-4-cols > div > div:first-child svg,
+footer .columns.block.columns-4-cols > div > div:first-child .icon {
   margin-right: 8px;
   vertical-align: middle;
 }
@@ -83,23 +81,24 @@ footer .columns.block.columns-4-cols ul li a:hover {
   text-decoration: underline;
 }
 
-footer .columns.block.columns-4-cols > div:last-child p {
+footer .columns.block.columns-4-cols > div > div:last-child p {
   font-size: 18px;
   line-height: 1.9;
   color: #ffffff;
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
   footer {
     padding: 40px 30px;
   }
 
-  footer .columns.block.columns-4-cols {
+  footer .columns.block.columns-4-cols > div {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  footer .columns.block.columns-4-cols > div {
+  footer .columns.block.columns-4-cols > div > div {
     margin-bottom: 30px;
   }
 }
