@@ -1,57 +1,50 @@
-/* ==== FOOTER CONTAINER ==== */
+/* Footer Global Wrapper */
 .footer-wrapper {
   background-color: #004d5c;
-  color: #ffffff;
-  padding: 0; /* Removed outer padding */
+  color: white;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 0.95rem;
 }
 
 .footer .section.columns-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 60px 40px; /* Inner padding for layout */
+  padding: 60px 40px;
 }
 
-/* ==== GRID LAYOUT: 4 COLUMNS ==== */
 .footer .columns-wrapper > .columns {
   display: grid;
   grid-template-columns: 360px repeat(3, 1fr);
   gap: 60px;
-  align-items: start;
 }
 
-/* ==== COLUMN 1: Address Panel ==== */
+/* First Column - Contact Info */
 .footer .columns > div:first-child {
   background-color: #023e4d;
-  background-image: url('/path/to/pattern.svg'); /* Update if applicable */
+  background-image: url('/path/to/pattern.svg'); /* Replace with actual path */
   background-repeat: repeat;
   padding: 32px 28px;
-  border-radius: 0px; /* Removed curve corners */
+  border-radius: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 12px;
+  color: white;
   position: relative;
+  line-height: 1.7;
 }
 
-/* Address Text */
 .footer .columns > div:first-child p {
-  margin: 0;
-  line-height: 1.7;
+  margin: 0 0 10px;
   font-size: 0.95rem;
 }
 
-/* Phone Button */
 .footer .columns > div:first-child .button-container {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .footer .columns > div:first-child .button {
   background: none;
   border: none;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   font-size: 0.95rem;
   text-decoration: none;
 }
@@ -60,64 +53,75 @@
   text-decoration: underline;
 }
 
-/* Gold Square - Bottom Left */
 .footer .columns > div:first-child::after {
   content: '';
   position: absolute;
-  bottom: -12px;
-  left: -12px;
+  bottom: -10px;
+  left: -10px;
   width: 16px;
   height: 16px;
   background-color: #d6a55c;
-  border-radius: 2px;
 }
 
-/* ==== HEADINGS for COLUMNS 2-4 ==== */
-.footer .columns h5 {
+/* Second and Third Columns - Links */
+.footer .columns > div:nth-child(2),
+.footer .columns > div:nth-child(3) {
+  text-align: left;
+}
+
+.footer .columns > div:nth-child(2) h5,
+.footer .columns > div:nth-child(3) h5 {
   color: #a3c6cc;
   font-size: 1.05rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  text-align: left; /* Ensures left alignment */
+  margin-bottom: 16px;
 }
 
-/* ==== LINKS AND LISTS ==== */
-.footer .columns ul {
+.footer .columns > div:nth-child(2) ul,
+.footer .columns > div:nth-child(3) ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer .columns ul li {
-  margin-bottom: 0.6rem;
+.footer .columns > div:nth-child(2) ul li,
+.footer .columns > div:nth-child(3) ul li {
+  margin-bottom: 10px;
 }
 
-.footer .columns ul li a {
-  color: #ffffff;
-  text-decoration: none;
+.footer .columns > div:nth-child(2) ul li a,
+.footer .columns > div:nth-child(3) ul li a {
+  color: white;
   font-size: 0.95rem;
+  text-decoration: none;
 }
 
-.footer .columns ul li a:hover {
+.footer .columns > div:nth-child(2) ul li a:hover,
+.footer .columns > div:nth-child(3) ul li a:hover {
   text-decoration: underline;
 }
 
-/* ==== ABOUT TEXT (last column) ==== */
-.footer .columns h5 + p {
-  color: #ffffff;
-  font-size: 0.95rem;
-  margin-top: 0;
-  line-height: 1.7;
-  max-width: 320px;
+/* Fourth Column - About Text */
+.footer .columns > div:nth-child(4) h5 {
+  color: #a3c6cc;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
-/* ==== RESPONSIVE BREAKPOINTS ==== */
+.footer .columns > div:nth-child(4) p {
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .footer .columns-wrapper > .columns {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-
   .footer .columns > div:first-child {
     grid-column: span 2;
   }
