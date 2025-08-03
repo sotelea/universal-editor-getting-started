@@ -6,17 +6,14 @@ footer {
 }
 
 footer .columns-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-footer .columns.block.columns-4-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   width: 100%;
+}
+
+footer .columns.block.columns-4-cols {
+  display: contents;
 }
 
 footer .columns.block.columns-4-cols > div {
@@ -94,15 +91,10 @@ footer .columns.block.columns-4-cols > div:last-child p {
   }
 
   footer .columns-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  footer .columns.block.columns-4-cols {
     grid-template-columns: 1fr;
   }
 
-  footer .columns.block.columns-4-cols > div:first-child {
+  footer .columns.block.columns-4-cols > div {
     width: 100%;
   }
 }
