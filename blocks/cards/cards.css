@@ -357,6 +357,7 @@
     grid-template-columns: 1fr !important;
   }
 }
+/* 2 cards per row for section_704718454 */
 .section[data-aue-resource*="section_704718454"] .cards.block > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -365,4 +366,61 @@
   padding: 0;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+/* Responsive fallback to 1 column */
+@media (max-width: 768px) {
+  .section[data-aue-resource*="section_704718454"] .cards.block > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Card Content Styling ===== */
+
+/* Title styling */
+.section[data-aue-resource*="section_704718454"] .press-release-title {
+  font-size: 1.25rem; /* approx 20px */
+  font-weight: 600;
+  margin: 8px 0 12px;
+  color: #002b45;
+  line-height: 1.4;
+}
+
+/* Date text */
+.section[data-aue-resource*="section_704718454"] .press-release-date {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a3c4c;
+  margin-bottom: 4px;
+}
+
+/* Description (optional if present) */
+.section[data-aue-resource*="section_704718454"] .press-release-description {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Button/Tags styling */
+.section[data-aue-resource*="section_704718454"] .press-release-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.section[data-aue-resource*="section_704718454"] .press-release-tags .press-release-page-link {
+  border: 1px solid #002b45;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #002b45;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.section[data-aue-resource*="section_704718454"] .press-release-tags .press-release-page-link:hover {
+  background-color: #002b45;
+  color: white;
 }
