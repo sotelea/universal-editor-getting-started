@@ -1,10 +1,10 @@
-/* FOOTER BASE */
+/* ==== FOOTER CONTAINER ==== */
 .footer-wrapper {
   background-color: #004d5c;
   color: #ffffff;
+  padding: 60px 40px;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 0.95rem;
-  padding: 60px 40px;
 }
 
 .footer .section.highlight {
@@ -12,36 +12,42 @@
   margin: 0 auto;
 }
 
-/* GRID LAYOUT */
+/* ==== GRID LAYOUT: 4 COLUMNS ==== */
 .footer .default-content-wrapper {
   display: grid;
   grid-template-columns: 360px repeat(3, 1fr);
-  gap: 40px;
+  gap: 60px;
   align-items: start;
 }
 
-/* COLUMN 1 - Address block with logo and icon */
+/* ==== COLUMN 1: Address Panel ==== */
 .footer .default-content-wrapper > div:first-child {
-  background-color: #02434f;
-  background-image: url('/path/to/your/pattern.svg'); /* Optional pattern image */
+  background-color: #023e4d;
+  background-image: url('/path/to/pattern.svg'); /* Optional: actual pattern background */
   background-repeat: repeat;
-  padding: 30px 30px 40px;
-  border-radius: 30px;
+  padding: 32px 28px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
 }
 
+/* Logo inside address block */
 .footer .default-content-wrapper > div:first-child img {
   max-width: 160px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
+/* Address Text */
 .footer .default-content-wrapper > div:first-child p {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
+/* Phone Icon (optional inline SVG or font icon) */
 .footer .default-content-wrapper > div:first-child svg,
 .footer .default-content-wrapper > div:first-child .icon {
   display: inline-block;
@@ -50,15 +56,27 @@
   font-size: 1rem;
 }
 
-/* COLUMN TITLES (h5) */
+/* Gold Square - Bottom Left */
+.footer .default-content-wrapper > div:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  width: 16px;
+  height: 16px;
+  background-color: #d6a55c;
+  border-radius: 2px;
+}
+
+/* ==== HEADINGS for COLUMNS 2-4 ==== */
 .footer .default-content-wrapper h5 {
   color: #a3c6cc;
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-/* LISTS */
+/* ==== LISTS ==== */
 .footer .default-content-wrapper ul {
   list-style: none;
   padding: 0;
@@ -79,20 +97,20 @@
   text-decoration: underline;
 }
 
-/* ABOUT PARAGRAPH */
+/* ==== ABOUT TEXT ==== */
 .footer .default-content-wrapper h5 + p {
   color: #ffffff;
   font-size: 0.95rem;
   margin-top: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 320px;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* ==== RESPONSIVE BREAKPOINTS ==== */
 @media (max-width: 1024px) {
   .footer .default-content-wrapper {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
   }
 
   .footer .default-content-wrapper > div:first-child {
