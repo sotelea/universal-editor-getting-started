@@ -1,3 +1,8 @@
+.columns-wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 /* === 3 Column Flex Layout === */
 .columns.block.columns-3-cols > div {
   display: flex;
