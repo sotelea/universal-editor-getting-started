@@ -100,3 +100,7 @@
     border-bottom: none;
   }
 }
+/* 🟦 Hover effect (blue gradient and white text) */
+.columns.block.columns-3-cols > div > div:hover {
+  background: linear-gradient(90deg, #005c71, #007389);
+}
