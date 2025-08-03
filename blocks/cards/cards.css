@@ -690,3 +690,6 @@
   margin: 0;
   text-align: right;
 }
+.section[data-aue-resource*="section_1909853916"] .default-content-wrapper {
+  margin-left: 0 !important;
+}
