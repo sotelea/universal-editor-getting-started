@@ -693,3 +693,60 @@
 .section[data-aue-resource*="section_1909853916"] .default-content-wrapper {
   margin-left: 0 !important;
 }
+-------------------------
+/* Target the whole section */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* allows responsiveness */
+}
+
+/* Style the image */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper picture img {
+  width: 250px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Right-side text container */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper > div {
+  flex: 1;
+  max-width: 700px;
+}
+
+/* Quotation text */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #004353;
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Quotation icon */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper h3::before {
+  content: "“";
+  font-size: 4rem;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  color: #006775;
+  font-family: serif;
+  line-height: 1;
+}
+
+/* CEO Name */
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper p {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.section[data-aue-resource*="section_640766531"] .default-content-wrapper p strong {
+  color: #002e3d;
+}
