@@ -413,17 +413,18 @@
 
 /* Individual card styling */
 [data-aue-resource*="section_704718454"] .cards.block li {
-  background-color: #f9f9f9;
-  border-radius: 6px;
-  padding: 24px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: #f9f9f9; /* Light background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 24px; /* Inner spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  transition: transform 0.2s ease; /* Hover animation */
 }
 
 /* Card content */
 [data-aue-resource*="section_704718454"] .cards-card-body > div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 /* Date */
