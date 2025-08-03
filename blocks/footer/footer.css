@@ -2,18 +2,19 @@
 .footer-wrapper {
   background-color: #004d5c;
   color: #ffffff;
-  padding: 60px 40px;
+  padding: 0; /* Removed outer padding */
   font-family: "Helvetica Neue", sans-serif;
   font-size: 0.95rem;
 }
 
-.footer .section.highlight {
+.footer .section.columns-container {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 60px 40px; /* Inner padding for layout */
 }
 
 /* ==== GRID LAYOUT: 4 COLUMNS ==== */
-.footer .default-content-wrapper {
+.footer .columns-wrapper > .columns {
   display: grid;
   grid-template-columns: 360px repeat(3, 1fr);
   gap: 60px;
@@ -21,12 +22,12 @@
 }
 
 /* ==== COLUMN 1: Address Panel ==== */
-.footer .default-content-wrapper > div:first-child {
+.footer .columns > div:first-child {
   background-color: #023e4d;
-  background-image: url('/path/to/pattern.svg'); /* Optional: actual pattern background */
+  background-image: url('/path/to/pattern.svg'); /* Update if applicable */
   background-repeat: repeat;
   padding: 32px 28px;
-  border-radius: 24px;
+  border-radius: 0px; /* Removed curve corners */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,30 +35,33 @@
   position: relative;
 }
 
-/* Logo inside address block */
-.footer .default-content-wrapper > div:first-child img {
-  max-width: 160px;
-  margin-bottom: 24px;
-}
-
 /* Address Text */
-.footer .default-content-wrapper > div:first-child p {
+.footer .columns > div:first-child p {
   margin: 0;
   line-height: 1.7;
   font-size: 0.95rem;
 }
 
-/* Phone Icon (optional inline SVG or font icon) */
-.footer .default-content-wrapper > div:first-child svg,
-.footer .default-content-wrapper > div:first-child .icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  font-size: 1rem;
+/* Phone Button */
+.footer .columns > div:first-child .button-container {
+  margin-top: 12px;
+}
+
+.footer .columns > div:first-child .button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer .columns > div:first-child .button:hover {
+  text-decoration: underline;
 }
 
 /* Gold Square - Bottom Left */
-.footer .default-content-wrapper > div:first-child::after {
+.footer .columns > div:first-child::after {
   content: '';
   position: absolute;
   bottom: -12px;
@@ -69,36 +73,37 @@
 }
 
 /* ==== HEADINGS for COLUMNS 2-4 ==== */
-.footer .default-content-wrapper h5 {
+.footer .columns h5 {
   color: #a3c6cc;
   font-size: 1.05rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  text-align: left; /* Ensures left alignment */
 }
 
-/* ==== LISTS ==== */
-.footer .default-content-wrapper ul {
+/* ==== LINKS AND LISTS ==== */
+.footer .columns ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer .default-content-wrapper ul li {
+.footer .columns ul li {
   margin-bottom: 0.6rem;
 }
 
-.footer .default-content-wrapper ul li a {
+.footer .columns ul li a {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
 }
 
-.footer .default-content-wrapper ul li a:hover {
+.footer .columns ul li a:hover {
   text-decoration: underline;
 }
 
-/* ==== ABOUT TEXT ==== */
-.footer .default-content-wrapper h5 + p {
+/* ==== ABOUT TEXT (last column) ==== */
+.footer .columns h5 + p {
   color: #ffffff;
   font-size: 0.95rem;
   margin-top: 0;
@@ -108,18 +113,18 @@
 
 /* ==== RESPONSIVE BREAKPOINTS ==== */
 @media (max-width: 1024px) {
-  .footer .default-content-wrapper {
+  .footer .columns-wrapper > .columns {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 
-  .footer .default-content-wrapper > div:first-child {
+  .footer .columns > div:first-child {
     grid-column: span 2;
   }
 }
 
 @media (max-width: 600px) {
-  .footer .default-content-wrapper {
+  .footer .columns-wrapper > .columns {
     grid-template-columns: 1fr;
   }
 }
