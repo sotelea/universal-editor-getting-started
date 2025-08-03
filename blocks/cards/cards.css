@@ -1,3 +1,27 @@
+/* Styles for the title and paragraph above the cards */
+.cards-container .default-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.cards-container .default-content-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.cards-container .default-content-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d0e3e5;
+  margin: 0 auto;
+  max-width: 720px;
+}
 .cards.block {
   background-color: #004b55;
   padding: 60px 20px;
