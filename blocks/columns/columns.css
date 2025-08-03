@@ -3,156 +3,96 @@
     padding-right: 30px;
 }
 .columns.block.columns-3-cols {
-    background-color: #c3965a;
   position: relative;
   z-index: 2;
-  margin-top: -220px;  /* Pull the cards up onto the banner */
-  padding-top: 80px;   /* Distance from top of the banner */
+  margin-top: -160px;
+  padding-top: 80px;
 }
 
-/* === 3 Column Flex Layout === */
+/* Flex layout for 3-column cards */
 .columns.block.columns-3-cols > div {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1200px;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  background: none;
 }
 
-/* === Each Card === */
+/* Each card */
 .columns.block.columns-3-cols > div > div {
-  flex: 1 1 33.33%;
-  background-color: #c3965a;
-  padding: 2rem;
-  box-sizing: border-box;
-  min-height: 220px;
-  background-color: var(--column-background-color);
-  border: 1px solid #ccc;
+  flex: 1;
+  min-height: 240px;
+  padding: 2rem 1.5rem;
+  background-color: #ddb178; /* Tan background */
   text-align: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: background-color 0.3s ease;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #a97d40;
+  position: relative;
 }
 
-/* Remove right border from last card */
+/* Remove border from last card */
 .columns.block.columns-3-cols > div > div:last-child {
   border-right: none;
 }
 
-/* === Heading and Text === */
-.columns.block.columns-3-cols > div > div h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #003b3f;
-  font-weight: 700;
+/* Simulated label using ::before with nth-child */
+.columns.block.columns-3-cols > div > div:nth-child(1)::before {
+  content: 'CAREERS';
+}
+.columns.block.columns-3-cols > div > div:nth-child(2)::before {
+  content: 'INVESTORS';
+}
+.columns.block.columns-3-cols > div > div:nth-child(3)::before {
+  content: 'MEDIA';
 }
 
+.columns.block.columns-3-cols > div > div::before {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: #003b3f; /* Dark teal */
+}
+
+/* Main heading */
+.columns.block.columns-3-cols > div > div h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #003b3f;
+  margin-bottom: 0.5rem;
+}
+
+/* Description text */
 .columns.block.columns-3-cols > div > div p {
   font-size: 1rem;
-  color: #003b3f;
+  color: #3a3a3a;
   margin: 0;
+  line-height: 1.4;
 }
 
-/* === Hover Style === */
-.columns.block.columns-3-cols > div > div:hover {
-  background-color: #b2813e;
-  cursor: pointer;
-  border-radius: var(--column-border-radius);
-}
-
-/* === Responsive (Stack on small screens) === */
+/* Responsive behavior */
 @media (max-width: 768px) {
+  .columns.block.columns-3-cols {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .columns.block.columns-3-cols > div {
     flex-direction: column;
   }
 
   .columns.block.columns-3-cols > div > div {
-    flex: 1 1 100%;
     border-right: none;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #a97d40;
   }
 
   .columns.block.columns-3-cols > div > div:last-child {
     border-bottom: none;
-  }
-}
-/* === 2 Column Layout Styling === */
-.columns.block.columns-2-cols > div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: center;
-}
-
-/* Left column */
-.columns.block.columns-2-cols > div > div:first-child {
-  flex: 1 1 40%;
-  max-width: 600px;
-  padding: 16px;
-  box-sizing: border-box;
-}
-.columns.block.columns-2-cols > div > div:first-child h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #054e5a;
-}
-.columns.block.columns-2-cols > div > div:first-child p {
-  font-size: 1rem;
-  margin-bottom: 1.25rem;
-  color: #3a3a3a;
-  line-height: 1.5;
-}
-
-/* Button styling */
-.columns.block.columns-2-cols > div > div:first-child p.button-container a.button {
-  background-color: #054e5a;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-.columns.block.columns-2-cols > div > div:first-child p.button-container a.button:hover {
-  background-color: #033a43;
-}
-
-/* Right column (image) */
-.columns.block.columns-2-cols > div > div.columns-img-col {
-  flex: 1 1 55%;
-  max-width: 900px;
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 8px;
-}
-.columns.block.columns-2-cols > div > div.columns-img-col img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .columns.block.columns-2-cols > div {
-    flex-direction: column;
-  }
-  .columns.block.columns-2-cols > div > div:first-child,
-  .columns.block.columns-2-cols > div > div.columns-img-col {
-    max-width: 100%;
-    flex-basis: 100%;
-  }
-
-  /* Reset lifted card on mobile */
-  .columns.block.columns-3-cols > div > div:first-child {
-    position: static;
-    width: 100%;
-    top: 0;
-    margin: 0;
-    box-shadow: none;
   }
 }
