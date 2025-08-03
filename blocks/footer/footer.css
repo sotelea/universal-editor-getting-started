@@ -9,6 +9,7 @@ footer .columns-wrapper {
   width: 100%;
 }
 
+/* 4-column layout */
 footer .columns.block.columns-4-cols > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -16,13 +17,15 @@ footer .columns.block.columns-4-cols > div {
   width: 100%;
 }
 
-/* Each of the 4 columns */
+/* All columns */
 footer .columns.block.columns-4-cols > div > div {
   display: flex;
   flex-direction: column;
   gap: 12px;
   color: #ffffff;
 }
+
+/* First column: Contact info card */
 footer .columns.block.columns-4-cols > div > div:first-child {
   background-image: url('pattern-bg.png'); /* Replace with actual image path */
   background-size: cover;
@@ -31,30 +34,40 @@ footer .columns.block.columns-4-cols > div > div:first-child {
   padding: 40px 30px;
   font-size: 18px;
   line-height: 1.7;
-  color: #ffffff;
   position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   gap: 16px;
 }
 
-/* Logo inside first column */
+/* Contact logo */
 footer .columns.block.columns-4-cols > div > div:first-child img {
   width: 180px;
   margin-bottom: 20px;
 }
 
-/* Phone icon and number */
+/* Contact paragraphs */
+footer .columns.block.columns-4-cols > div > div:first-child p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+/* Phone icon */
 footer .columns.block.columns-4-cols > div > div:first-child .icon-phone {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 10px;
   font-size: 18px;
+  margin-top: 10px;
 }
 
-/* Optional bottom gold square */
+/* SVG/icon alignment */
+footer .columns.block.columns-4-cols > div > div:first-child svg,
+footer .columns.block.columns-4-cols > div > div:first-child .icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Bottom gold accent box */
 footer .columns.block.columns-4-cols > div > div:first-child::after {
   content: '';
   position: absolute;
@@ -66,34 +79,7 @@ footer .columns.block.columns-4-cols > div > div:first-child::after {
   border-bottom-left-radius: 4px;
 }
 
-/* Leftmost column (Contact Info Box) */
-footer .columns.block.columns-4-cols > div > div:first-child {
-  background-image: url('pattern-bg.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
-  padding: 40px 30px;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-footer .columns.block.columns-4-cols > div > div:first-child p {
-  font-size: 18px;
-  margin: 6px 0;
-}
-
-footer .columns.block.columns-4-cols > div > div:first-child svg,
-footer .columns.block.columns-4-cols > div > div:first-child .icon {
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-footer .columns.block.columns-4-cols p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin: 0;
-}
-
+/* Headings in other columns */
 footer .columns.block.columns-4-cols h5 {
   font-size: 22px;
   font-weight: 700;
@@ -101,6 +87,7 @@ footer .columns.block.columns-4-cols h5 {
   color: #a4c0c4;
 }
 
+/* List styling */
 footer .columns.block.columns-4-cols ul {
   list-style: none;
   padding: 0;
@@ -123,13 +110,21 @@ footer .columns.block.columns-4-cols ul li a:hover {
   text-decoration: underline;
 }
 
+/* Final column paragraph */
 footer .columns.block.columns-4-cols > div > div:last-child p {
   font-size: 18px;
   line-height: 1.9;
   color: #ffffff;
 }
 
-/* Responsive */
+/* Paragraphs in other columns */
+footer .columns.block.columns-4-cols p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive layout */
 @media (max-width: 1024px) {
   footer {
     padding: 40px 30px;
