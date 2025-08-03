@@ -5,6 +5,14 @@ footer {
   font-family: Arial, sans-serif;
 }
 
+footer .columns-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
 footer .columns.block.columns-4-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -81,7 +89,6 @@ footer .columns.block.columns-4-cols > div:last-child p {
   color: #ffffff;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   footer {
     padding: 40px 30px;
@@ -90,5 +97,9 @@ footer .columns.block.columns-4-cols > div:last-child p {
   footer .columns.block.columns-4-cols {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  footer .columns.block.columns-4-cols > div {
+    margin-bottom: 30px;
   }
 }
