@@ -105,22 +105,40 @@
   background: #054e5a;
 }
 
-/* 2-column layout styling */
+/* Two-column layout wrapper */
 .columns-wrapper .columns.block.columns-2-cols {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
   padding: 4rem 2rem;
-  background: #fff;
+  background-color: #fff;
 }
 
-.columns-wrapper .columns.block.columns-2-cols > div {
-  flex: 1 1 50%;
+/* Both left and right columns */
+.columns.block.columns-2-cols > div {
+  flex: 1;
   box-sizing: border-box;
 }
 
-/* Left content column styling */
+/* Image column */
+.columns.block.columns-2-cols .columns-img-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.columns.block.columns-2-cols .columns-img-col img,
+.columns.block.columns-2-cols .columns-img-col picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Heading style */
 .columns.block.columns-2-cols h1 {
   font-size: 2.5rem;
   color: #004b54;
@@ -128,13 +146,21 @@
   font-weight: 500;
 }
 
+/* Body text */
+.columns.block.columns-2-cols p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Button styling */
 .columns.block.columns-2-cols .button-container {
   margin-top: 2rem;
 }
 
 .columns.block.columns-2-cols .button-container .button {
   background: linear-gradient(to right, #007e8a, #003e51);
-  color: white;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
@@ -146,13 +172,13 @@
   background: linear-gradient(to right, #005e66, #002e3a);
 }
 
-/* Right image column styling */
-.columns.block.columns-2-cols .columns-img-col picture,
-.columns.block.columns-2-cols .columns-img-col img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
+/* Responsive fallback for mobile */
+@media (max-width: 768px) {
+  .columns-wrapper .columns.block.columns-2-cols {
+    flex-direction: column;
+  }
 
+  .columns.block.columns-2-cols > div {
+    width: 100%;
+  }
+}
