@@ -3,6 +3,7 @@
     padding-right: 30px;
 }
 .columns.block.columns-3-cols {
+    background-color: #c3965a;
   position: relative;
   z-index: 2;
   margin-top: -220px;  /* Pull the cards up onto the banner */
