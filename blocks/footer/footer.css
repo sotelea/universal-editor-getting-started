@@ -8,8 +8,15 @@ footer {
 footer .columns-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
   justify-content: space-between;
+  gap: 40px;
+}
+
+footer .columns.block.columns-4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
 }
 
 footer .columns.block.columns-4-cols > div {
@@ -17,9 +24,6 @@ footer .columns.block.columns-4-cols > div {
   flex-direction: column;
   gap: 12px;
   color: #ffffff;
-  min-width: 200px;
-  max-width: 280px;
-  flex: 1;
 }
 
 footer .columns.block.columns-4-cols > div:first-child {
@@ -28,8 +32,6 @@ footer .columns.block.columns-4-cols > div:first-child {
   background-position: center;
   border-radius: 30px;
   padding: 40px 30px;
-  flex-shrink: 0;
-  width: 300px;
   font-size: 18px;
   line-height: 1.7;
 }
@@ -94,6 +96,10 @@ footer .columns.block.columns-4-cols > div:last-child p {
   footer .columns-wrapper {
     flex-direction: column;
     gap: 40px;
+  }
+
+  footer .columns.block.columns-4-cols {
+    grid-template-columns: 1fr;
   }
 
   footer .columns.block.columns-4-cols > div:first-child {
