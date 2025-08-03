@@ -625,36 +625,43 @@
 .section[data-aue-resource*="section_1909853916"] {
   padding: 2rem 1rem;
   background-color: #ffffff;
+  font-family: "Georgia", serif; /* Matches the heading and values font */
 }
 
-/* Heading */
+/* Heading style */
 .section[data-aue-resource*="section_1909853916"] .default-content-wrapper h1 {
-  font-size: 2.5rem;
-  color: #0b3f4f;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #003d4c;
   margin-bottom: 2rem;
 }
 
 /* Card container (ul) */
 .section[data-aue-resource*="section_1909853916"] .cards.block ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: space-between;
-  list-style: none;
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
+  list-style: none;
+  flex-wrap: nowrap;
 }
 
-/* Card styles */
+/* Each card */
 .section[data-aue-resource*="section_1909853916"] .cards.block li {
   background-color: #e6eef0;
   padding: 2rem;
-  flex: 1 1 calc(25% - 1.5rem); /* 4 cards in a row with gaps */
+  width: 100%;
+  max-width: 280px;
+  height: 150px;
   box-sizing: border-box;
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: none !important; /* Disable any hover/move effects */
 }
 
-/* Inner text container */
+/* Inner container */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body {
   display: flex;
   flex-direction: column;
@@ -664,18 +671,20 @@
 
 /* Label (top) */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body p {
-  margin: 0;
+  font-size: 0.85rem;
   font-weight: bold;
-  font-size: 1rem;
-  color: #0b3f4f;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #003d4c;
+  margin: 0;
+  line-height: 1.2;
 }
 
-/* Value (bottom) */
+/* Value (bottom right) */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body h3 {
-  margin: 1.5rem 0 0 0;
-  font-size: 2.3rem;
-  color: #0b3f4f;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #003d4c;
   text-align: right;
+  margin: 0;
 }
