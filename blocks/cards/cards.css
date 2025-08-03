@@ -125,3 +125,80 @@
 .cards.block .cards-card-body a:hover::before {
   transform: translateX(2px);
 }
+
+
+/* ----- BACKGROUND IMAGE WRAPPER ----- */
+.cards-card-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.cards-card-image picture,
+.cards-card-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* ----- OVERLAY CARD ON IMAGE ----- */
+.overlay-card {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  background-color: #fff;
+  padding: 40px 32px;
+  margin: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ----- OVERLAY CARD TEXT STYLES ----- */
+.overlay-card .label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: #004b55;
+  font-weight: 700;
+}
+
+.overlay-card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #003a40;
+  margin: 0;
+}
+
+.overlay-card p {
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----- BUTTON / LINK STYLE ----- */
+.overlay-card a {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #004b55;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.overlay-card a:hover {
+  background-color: #006772;
+}
+
