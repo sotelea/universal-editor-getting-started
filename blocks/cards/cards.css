@@ -650,7 +650,7 @@
 /* Each card */
 .section[data-aue-resource*="section_1909853916"] .cards.block li {
   background-color: #e6eef0;
- padding: 2rem;
+
   width: 100%;
   max-width: 280px;
   height: 150px;
