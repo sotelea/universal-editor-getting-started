@@ -477,9 +477,22 @@ function decorateIcons(element, prefix = '') {
  * @param {Element} main The container element
  */
 function decorateSections(main) {
+  const toggleMappings = {
+    'About us': 'nav-tools',
+    'Sustainability': 'Environment',
+    'Careers': 'Jobs',
+    'Media': 'Press releases',
+    'Investors': 'Atlas Copco Group for investors',
+    'Innovation': 'The Virtual Showroom',
+    'English': 'The Virtual Showroom',
+  };
+
+  const allSections = [];
+
   main.querySelectorAll(':scope > div:not([data-section-status])').forEach((section) => {
     const wrappers = [];
     let defaultContent = false;
+
     [...section.children].forEach((e) => {
       if ((e.tagName === 'DIV' && e.className) || !defaultContent) {
         const wrapper = document.createElement('div');
@@ -489,10 +502,12 @@ function decorateSections(main) {
       }
       wrappers[wrappers.length - 1].append(e);
     });
+
     wrappers.forEach((wrapper) => section.append(wrapper));
     section.classList.add('section');
     section.dataset.sectionStatus = 'initialized';
-    section.style.display = 'none';
+
+    allSections.push(section); // store section for toggling later
 
     // Process section metadata
     const sectionMeta = section.querySelector('div.section-metadata');
@@ -512,7 +527,53 @@ function decorateSections(main) {
       sectionMeta.parentNode.remove();
     }
   });
+
+  // Hide all toggleable sections on load
+  allSections.forEach((sec) => {
+    const firstBtn = sec.querySelector('.default-content-wrapper .button');
+    const classNames = [...sec.classList];
+    const isToggleTarget = classNames.some((cls) => Object.values(toggleMappings).includes(cls)) ||
+      (firstBtn && Object.values(toggleMappings).includes(firstBtn.textContent.trim()));
+    if (isToggleTarget) {
+      sec.style.display = 'none';
+    }
+  });
+
+  // Setup toggle buttons
+  allSections.forEach((section) => {
+    Object.entries(toggleMappings).forEach(([triggerTitle, targetIdentifier]) => {
+      const btn = section.querySelector(`.default-content-wrapper .button[title="${triggerTitle}"]`);
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          allSections.forEach((sec) => {
+            const firstBtn = sec.querySelector('.default-content-wrapper .button');
+            const matchesTarget =
+              sec.classList.contains(targetIdentifier) ||
+              (firstBtn && firstBtn.textContent.trim() === targetIdentifier);
+
+            // Toggle target section only
+            if (matchesTarget) {
+              const isHidden = window.getComputedStyle(sec).display === 'none';
+              sec.style.display = isHidden ? 'block' : 'none';
+            } else {
+              // Hide all other toggle sections
+              const btnCheck = sec.querySelector('.default-content-wrapper .button');
+              const isOtherToggle =
+                sec.classList.contains('nav-tools') ||
+                (btnCheck && Object.values(toggleMappings).includes(btnCheck.textContent.trim()));
+              if (isOtherToggle) {
+                sec.style.display = 'none';
+              }
+            }
+          });
+        });
+      }
+    });
+  });
 }
+
+
 
 /**
  * Builds a block DOM Element from a two dimensional array, string, or object
@@ -599,6 +660,19 @@ function decorateBlock(block) {
     if (section) section.classList.add(`${shortBlockName}-container`);
     // eslint-disable-next-line no-use-before-define
     decorateButtons(block);
+     // TOGGLE NAV-TOOLS SECTION ON BUTTON CLICK
+    const aboutButton = block.querySelector('.button[title="About us"]');
+    if (aboutButton) {
+      aboutButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const navToolsSection = document.querySelector('.section.nav-tools');
+        if (navToolsSection) {
+          const isVisible = navToolsSection.style.display !== 'none';
+          navToolsSection.style.display = isVisible ? 'none' : 'block';
+        }
+      });
+    }
+  
   }
 }
 
