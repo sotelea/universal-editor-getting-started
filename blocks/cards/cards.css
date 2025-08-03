@@ -1,33 +1,43 @@
 /* ----------- CARD SECTION CONTAINER ----------- */
 .cards-container {
-  background-color: #004b55;
   padding-top: 60px;
   padding-bottom: 60px;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
 /* ----------- TITLE + PARAGRAPH ----------- */
-.cards-container .default-content-wrapper {
+.default-content-wrapper {
+  background-color: #004b55;
   max-width: 1200px;
-  margin: 0 auto 48px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 48px 20px 32px;
   text-align: left;
   color: #ffffff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
-.cards-container .default-content-wrapper h1 {
+.default-content-wrapper h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 16px;
   color: #ffffff;
 }
 
-.cards-container .default-content-wrapper p {
+.default-content-wrapper p {
   font-size: 1.125rem;
   line-height: 1.6;
   color: #cde4e6;
   max-width: 720px;
+  margin-bottom: 0;
+}
 
+/* ----------- CARD WRAPPER BACKGROUND ----------- */
+.cards-wrapper {
+  background-color: #004b55;
+  padding: 0 20px 60px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 /* ----------- CARD LIST ----------- */
