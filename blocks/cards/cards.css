@@ -397,7 +397,6 @@
 
 /* Scope to only section_704718454 to avoid global side effects */
 [data-aue-resource*="section_704718454"] {
-  padding: 40px 20px;
   font-family: var(--body-font-family, 'Helvetica Neue', sans-serif);
 }
 
