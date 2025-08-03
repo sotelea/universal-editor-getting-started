@@ -334,52 +334,26 @@
   }
 }
 
-/* Style individual card */
-.recentpressrelease .recent-press-release {
-  background-color: #f4f8f9;
-  padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+/* Force container to behave as a 2-column grid */
+.recentpressrelease .articles-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 32px !important;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
-/* Card title styling */
-.recentpressrelease .press-release-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #00436a;
+/* Optional: enforce width on each article if they're not behaving */
+.recentpressrelease .articles-container > article {
+  width: 100% !important;
 }
 
-/* Date styling */
-.recentpressrelease .press-release-date {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 8px;
-}
-
-/* Description */
-.recentpressrelease .press-release-description {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-/* CTA Link as Button */
-.recentpressrelease .press-release-page-link {
-  display: inline-block;
-  margin-top: auto;
-  padding: 10px 16px;
-  background-color: #0075c9;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-.recentpressrelease .press-release-page-link:hover {
-  background-color: #005f99;
+/* Responsive fallback for mobile */
+@media (max-width: 900px) {
+  .recentpressrelease .articles-container {
+    grid-template-columns: 1fr !important;
+  }
 }
