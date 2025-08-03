@@ -12,23 +12,26 @@ footer .section.highlight {
   padding: 0 !important;
 }
 
-/* Wrapper layout for footer columns */
+/* Footer grid layout */
 footer .default-content-wrapper {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
-  align-items: flex-start;
+  align-items: start;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Column base styles */
+/* Column headings */
 footer .default-content-wrapper h5 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-align: left;
 }
 
+/* Lists */
 footer .default-content-wrapper ul {
   list-style: none;
   padding: 0;
@@ -48,13 +51,18 @@ footer .default-content-wrapper a:hover {
   text-decoration: underline;
 }
 
-/* Logo and address (first column) */
+/* Logo & address (column 1) */
 footer .default-content-wrapper p {
   margin-bottom: 10px;
+  text-align: left;
 }
 
+/* Button container (contact link) */
 footer .default-content-wrapper .button-container {
-  margin-top: 10px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 footer .default-content-wrapper .button-container a.button {
@@ -69,10 +77,10 @@ footer .default-content-wrapper .button-container a.button {
 }
 
 footer .default-content-wrapper .button-container a.button::before {
-  content: '📞'; /* You can replace this with an inline SVG or background icon */
+  content: '📞'; /* Replace with icon if needed */
 }
 
-/* Bottom footer links and copyright */
+/* Copyright section */
 footer .default-content-wrapper p:last-of-type {
   grid-column: 1 / -1;
   text-align: center;
@@ -81,7 +89,7 @@ footer .default-content-wrapper p:last-of-type {
   opacity: 0.8;
 }
 
-/* Social icons row */
+/* Social icons container */
 footer .default-content-wrapper p:last-of-type + p {
   grid-column: 1 / -1;
   text-align: center;
@@ -90,26 +98,28 @@ footer .default-content-wrapper p:last-of-type + p {
 
 footer .default-content-wrapper p:last-of-type + p a {
   display: inline-block;
-  margin: 0 8px;
-  font-size: 20px;
+  margin: 0 10px;
+  font-size: 18px;
   padding: 8px;
   border: 1px solid #fff;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   text-align: center;
-  line-height: 18px;
+  line-height: 20px;
 }
 
-/* Responsive: stack on small screens */
+/* Responsive layout */
 @media (max-width: 900px) {
   footer .default-content-wrapper {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  footer .default-content-wrapper h5 {
-    margin-top: 20px;
+  footer .default-content-wrapper h5,
+  footer .default-content-wrapper p,
+  footer .default-content-wrapper li {
+    text-align: center;
   }
 
   footer .default-content-wrapper .button-container {
