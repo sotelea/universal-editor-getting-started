@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+    background-color: #054e5a;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -17,7 +17,7 @@ header nav {
   margin: auto;
   max-width: 1248px;
   height: var(--nav-height);
-  padding: 0 24px;
+  padding: 0 20px;
   font-family: var(--body-font-family);
 }
 
@@ -36,7 +36,7 @@ header nav[aria-expanded='true'] {
     justify-content: space-between;
     gap: 0 32px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 0 20px;
   }
 
   header nav[aria-expanded='true'] {
@@ -51,7 +51,33 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:any-link:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+header nav a.button {
+  background: transparent !important;
+  color: black !important;
+  text-decoration: none !important;
+  border: none !important;
+  font-weight: 500;
+  font-size: var(--body-font-size-s);
+  padding: 8px 16px;
+  border-radius: 0;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav a.button:hover,
+header nav a.button:focus {
+  background: transparent !important;
+  color: orange !important;
+  text-decoration: underline !important;
+  outline: none;
 }
 
 /* hamburger */
