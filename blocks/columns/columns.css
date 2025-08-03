@@ -1,7 +1,8 @@
-.columns-wrapper{
-    padding-left: 30px;
-    padding-right: 30px;
+.columns-wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
 }
+
 .columns.block.columns-3-cols {
   position: relative;
   z-index: 2;
@@ -22,9 +23,9 @@
 /* Each card */
 .columns.block.columns-3-cols > div > div {
   flex: 1;
-  min-height: 240px;
-  padding: 2rem 1.5rem;
-  background-color: #ddb178; /* Tan background */
+  height: 320px; /* Adjusted to match visual */
+  padding: 24px;
+  background-color: #ddb178; /* Light brown background */
   text-align: center;
   box-sizing: border-box;
   display: flex;
@@ -32,14 +33,15 @@
   justify-content: center;
   border-right: 1px solid #a97d40;
   position: relative;
+  max-width: 400px; /* Roughly matches layout from screenshot */
 }
 
-/* Remove border from last card */
+/* Remove right border from last card */
 .columns.block.columns-3-cols > div > div:last-child {
   border-right: none;
 }
 
-/* Simulated label using ::before with nth-child */
+/* Labels above the cards */
 .columns.block.columns-3-cols > div > div:nth-child(1)::before {
   content: 'CAREERS';
 }
@@ -52,31 +54,31 @@
 
 .columns.block.columns-3-cols > div > div::before {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
-  color: #003b3f; /* Dark teal */
-}
-
-/* Main heading */
-.columns.block.columns-3-cols > div > div h3 {
-  font-size: 1.8rem;
- font-weight: 500;
-  color: #003b3f;
   margin-bottom: 0.5rem;
+  color: #003b3f;
 }
 
-/* Description text */
+/* Title (e.g. "Available jobs") */
+.columns.block.columns-3-cols > div > div h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #003b3f;
+  margin: 0 0 0.8rem;
+}
+
+/* Description */
 .columns.block.columns-3-cols > div > div p {
   font-size: 1rem;
   color: #3a3a3a;
+  line-height: 1.5;
   margin: 0;
-  line-height: 1.4;
 }
 
-/* Responsive behavior */
+/* Responsive */
 @media (max-width: 768px) {
   .columns.block.columns-3-cols {
     margin-top: 0;
@@ -90,6 +92,8 @@
   .columns.block.columns-3-cols > div > div {
     border-right: none;
     border-bottom: 1px solid #a97d40;
+    max-width: none;
+    height: auto;
   }
 
   .columns.block.columns-3-cols > div > div:last-child {
