@@ -10,12 +10,13 @@ footer .columns.block.columns-4-cols > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  align-items: start;
 }
 
 /* First column: contact info card */
 footer .columns.block.columns-4-cols > div > div:first-child {
-  
-  background-repeat: repeat;
+  background-image: url('/path-to-your-pattern.png'); /* Replace with your actual image path */
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 40px 30px;
   border-radius: 40px 0 40px 0;
@@ -55,7 +56,7 @@ footer .columns.block.columns-4-cols > div > div:first-child .icon-phone {
   font-size: 18px;
 }
 
-/* Optional phone icon style */
+/* Phone icon styling */
 footer .columns.block.columns-4-cols > div > div:first-child .icon-phone svg,
 footer .columns.block.columns-4-cols > div > div:first-child .icon-phone .icon {
   width: 20px;
@@ -75,13 +76,14 @@ footer .columns.block.columns-4-cols > div > div:first-child::after {
   border-radius: 0 0 0 4px;
 }
 
-/* Other columns basic style */
+/* Right-side footer columns: headings */
 footer .columns.block.columns-4-cols > div > div:not(:first-child) h5 {
   font-size: 20px;
   color: #a4c0c4;
   margin-bottom: 12px;
 }
 
+/* Right-side footer columns: link lists */
 footer .columns.block.columns-4-cols ul {
   list-style: none;
   padding: 0;
@@ -102,12 +104,18 @@ footer .columns.block.columns-4-cols ul li a:hover {
   text-decoration: underline;
 }
 
-/* Mobile responsive layout */
+/* Responsive layout for tablets and below */
 @media (max-width: 1024px) {
   footer {
     padding: 40px 30px;
   }
 
+  footer .columns.block.columns-4-cols > div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
   footer .columns.block.columns-4-cols > div {
     grid-template-columns: 1fr;
   }
