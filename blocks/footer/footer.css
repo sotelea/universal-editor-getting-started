@@ -23,6 +23,48 @@ footer .columns.block.columns-4-cols > div > div {
   gap: 12px;
   color: #ffffff;
 }
+footer .columns.block.columns-4-cols > div > div:first-child {
+  background-image: url('pattern-bg.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px 0 40px 0;
+  padding: 40px 30px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+/* Logo inside first column */
+footer .columns.block.columns-4-cols > div > div:first-child img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+/* Phone icon and number */
+footer .columns.block.columns-4-cols > div > div:first-child .icon-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Optional bottom gold square */
+footer .columns.block.columns-4-cols > div > div:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #d9a53c;
+  border-bottom-left-radius: 4px;
+}
 
 /* Leftmost column (Contact Info Box) */
 footer .columns.block.columns-4-cols > div > div:first-child {
