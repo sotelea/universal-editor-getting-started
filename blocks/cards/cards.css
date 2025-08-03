@@ -243,7 +243,7 @@
 /* Make the first card inside section_704718454 stand out in a banner style */
 .cards-container[data-aue-resource*="section_704718454"] .cards.block > ul > li:first-child {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  
   background-color: #f3f8fa;
   padding: 40px;
   gap: 32px;
