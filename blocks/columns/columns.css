@@ -1,4 +1,6 @@
 .columns-wrapper{
+    margin-top: -220px; /* pull it up over the banner */
+  padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
 }
