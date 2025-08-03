@@ -125,34 +125,35 @@
 .cards.block .cards-card-body a:hover::before {
   transform: translateX(2px);
 }
-/* ------- SPECIAL STYLE FOR SPECIFIC FIRST CARD ONLY ------- */
+/* Card section with image background */
 .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child {
   position: relative;
   height: 500px;
-  border-radius: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  box-shadow: none;
+  background-color: white;
 }
 
-/* Full image as background */
+/* Full-size image container */
 .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image {
   position: absolute;
   inset: 0;
   z-index: 1;
+  background-color: white;
 }
 
+/* Full-width and height image */
 .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: unset;
+  display: block;
 }
 
-/* Overlay card body */
+/* Foreground card body */
 .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body {
   position: relative;
   z-index: 2;
@@ -165,10 +166,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;
 }
 
-/* Title + Label Text */
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body > div > p:first-child {
+/* Label styling (e.g., SUSTAINABILITY) */
+.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] .cards-card-body > div > p:first-child {
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 700;
@@ -176,17 +178,20 @@
   margin: 0;
 }
 
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body h2 {
+/* Heading */
+.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #003a40;
   margin: 0;
+  text-align: left;
 }
 
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body > div > p:last-of-type {
+/* Paragraph text */
+.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] .cards-card-body > div > p:last-of-type {
   font-size: 1.125rem;
   color: #333;
   line-height: 1.6;
   margin: 0;
+  text-align: left;
 }
-
