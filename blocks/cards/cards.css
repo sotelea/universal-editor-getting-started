@@ -504,9 +504,9 @@
     grid-template-columns: 1fr;
   }
 }
-/* Target the whole section */
+/* Main section styling */
 .section[data-aue-resource*="section_1893523958"] {
-  background-color: #00303d;
+  background-color: #004452;
   padding: 4rem 1rem;
   color: #fff;
 }
@@ -515,50 +515,41 @@
 .section[data-aue-resource*="section_1893523958"] .default-content-wrapper h1 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 3rem;
+  text-align: left;
 }
 
-/* Cards layout (3 in a row for large screens) */
+/* Cards layout */
 .section[data-aue-resource*="section_1893523958"] .cards-wrapper ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Individual card style */
+/* Individual card */
 .section[data-aue-resource*="section_1893523958"] .cards-wrapper li {
-  background-color: #004855;
+  background-color: #005e6a;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 16px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-/* Date block (left top corner style) */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-block {
-  border: 1px solid #fff;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  text-align: center;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-/* Category label */
+/* Category label (e.g. INVESTORS or QUARTERLY RELEASE) */
 .section[data-aue-resource*="section_1893523958"] .cards-wrapper li .category {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b3d4db;
+  margin-bottom: 0.5rem;
 }
 
 /* Headline */
@@ -567,41 +558,66 @@
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Description */
 .section[data-aue-resource*="section_1893523958"] .cards-wrapper li p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* Button style */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0.5rem 1.2rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-/* Hover effect for button */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button:hover {
-  background-color: #fff;
-  color: #00303d;
-}
-
-/* Show more button */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper + .button-container a.button {
-  margin-top: 2rem;
+/* Date rectangle for event cards */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box {
+  border: 1px solid #f2b343;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f2b343;
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box span {
+  display: block;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Card link / button inside */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button::after {
+  content: "→";
+  font-size: 1.2rem;
+}
+
+/* CTA button at bottom */
+.section[data-aue-resource*="section_1893523958"] .button-container a.button {
+  display: inline-block;
+  margin-top: 3rem;
   border: 1px solid #fff;
   color: #fff;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-transform: uppercase;
-  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.section[data-aue-resource*="section_1893523958"] .button-container a.button:hover {
+  background: #fff;
+  color: #00303d;
 }
