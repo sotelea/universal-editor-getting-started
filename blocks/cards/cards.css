@@ -7,27 +7,24 @@
 
 /* ----------- TITLE + PARAGRAPH ----------- */
 .default-content-wrapper {
-  background-color: #004b55;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 48px 20px 32px;
+  margin: 0 auto 32px;
+  padding: 0 20px;
   text-align: left;
   color: #ffffff;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
 }
 
 .default-content-wrapper h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #004b55;
 }
 
 .default-content-wrapper p {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #cde4e6;
+  color: #003a40;
   max-width: 720px;
   margin-bottom: 0;
 }
@@ -35,9 +32,8 @@
 /* ----------- CARD WRAPPER BACKGROUND ----------- */
 .cards-wrapper {
   background-color: #004b55;
-  padding: 0 20px 60px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  padding: 48px 20px;
+  border-radius: 16px;
 }
 
 /* ----------- CARD LIST ----------- */
