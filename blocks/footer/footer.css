@@ -1,20 +1,118 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/* Reset section padding */
+.section.highlight {
+  padding: 0 !important;
+  background-color: #074e59; /* dark teal */
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
+/* Outer container */
 footer .footer > div {
-  margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-footer .footer p {
-  margin: 0;
+/* Columns wrapper */
+.default-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  align-items: start;
+  padding: 0 32px;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* First column: address box */
+.default-content-wrapper p:first-of-type,
+.default-content-wrapper p:nth-of-type(2),
+.default-content-wrapper p:nth-of-type(3),
+.default-content-wrapper p:nth-of-type(4) {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Phone button styling */
+.button-container .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.button-container .button::before {
+  content: "📞"; /* Optional: replace with SVG if needed */
+}
+
+/* Column headings */
+.default-content-wrapper h5 {
+  color: #ccc;
+  font-size: 16px;
+  margin: 16px 0 8px;
+}
+
+/* Link lists */
+.default-content-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.default-content-wrapper ul li {
+  margin-bottom: 8px;
+}
+
+.default-content-wrapper ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.default-content-wrapper ul li a:hover {
+  text-decoration: underline;
+}
+
+/* About text */
+.default-content-wrapper h5 + p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Copyright and legal links */
+.default-content-wrapper p:last-of-type {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.default-content-wrapper p:last-of-type a {
+  color: #aaa;
+  margin-right: 8px;
+  text-decoration: none;
+}
+
+.default-content-wrapper p:last-of-type a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive stack for smaller screens */
+@media (max-width: 768px) {
+  .default-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .default-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
