@@ -1,134 +1,94 @@
-/* Footer Global Wrapper */
-.footer-wrapper {
-  background-color: #004d5c;
+footer {
+  background-color: #004a59;
   color: white;
-  font-family: "Helvetica Neue", sans-serif;
+  padding: 60px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
 }
 
-.footer .section.columns-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-.footer .columns-wrapper > .columns {
-  display: grid;
-  grid-template-columns: 360px repeat(3, 1fr);
-  gap: 60px;
-}
-
-/* First Column - Contact Info */
-.footer .columns > div:first-child {
-  background-color: #023e4d;
-  background-image: url('/path/to/pattern.svg'); /* Replace with actual path */
-  background-repeat: repeat;
-  padding: 32px 28px;
-  border-radius: 0;
+footer .footer-contact-card {
+  background-image: url('pattern-bg.png'); /* placeholder - update if needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 280px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  color: white;
-  position: relative;
-  line-height: 1.7;
+  justify-content: space-between;
+  line-height: 1.5;
 }
 
-.footer .columns > div:first-child p {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
+footer .footer-contact-card p {
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.6;
 }
 
-.footer .columns > div:first-child .button-container {
-  margin-top: 8px;
+footer .footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.footer .columns > div:first-child .button {
-  background: none;
-  border: none;
-  padding: 0;
+footer .footer-column {
+  min-width: 200px;
+  max-width: 280px;
+  flex: 1;
+}
+
+footer .footer-column h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
   color: #ffffff;
-  font-size: 0.95rem;
-  text-decoration: none;
 }
 
-.footer .columns > div:first-child .button:hover {
-  text-decoration: underline;
-}
-
-.footer .columns > div:first-child::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: -10px;
-  width: 16px;
-  height: 16px;
-  background-color: #d6a55c;
-}
-
-/* Second and Third Columns - Links */
-.footer .columns > div:nth-child(2),
-.footer .columns > div:nth-child(3) {
-  text-align: left;
-}
-
-.footer .columns > div:nth-child(2) h5,
-.footer .columns > div:nth-child(3) h5 {
-  color: #a3c6cc;
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-}
-
-.footer .columns > div:nth-child(2) ul,
-.footer .columns > div:nth-child(3) ul {
+footer .footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer .columns > div:nth-child(2) ul li,
-.footer .columns > div:nth-child(3) ul li {
+footer .footer-column ul li {
   margin-bottom: 10px;
 }
 
-.footer .columns > div:nth-child(2) ul li a,
-.footer .columns > div:nth-child(3) ul li a {
-  color: white;
-  font-size: 0.95rem;
+footer .footer-column ul li a {
+  color: #ffffff;
   text-decoration: none;
+  font-size: 14px;
 }
 
-.footer .columns > div:nth-child(2) ul li a:hover,
-.footer .columns > div:nth-child(3) ul li a:hover {
+footer .footer-column ul li a:hover {
   text-decoration: underline;
 }
 
-/* Fourth Column - About Text */
-.footer .columns > div:nth-child(4) h5 {
-  color: #a3c6cc;
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.footer .columns > div:nth-child(4) p {
-  color: white;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 320px;
+footer .footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
   margin: 0;
+  color: #ffffff;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
-  .footer .columns-wrapper > .columns {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+  footer {
+    flex-direction: column;
+    padding: 40px 30px;
   }
-  .footer .columns > div:first-child {
-    grid-column: span 2;
-  }
-}
 
-@media (max-width: 600px) {
-  .footer .columns-wrapper > .columns {
-    grid-template-columns: 1fr;
+  footer .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .footer-contact-card {
+    margin-bottom: 40px;
+    width: 100%;
   }
 }
