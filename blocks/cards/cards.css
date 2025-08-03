@@ -629,10 +629,10 @@
 
 /* Heading style */
 .section[data-aue-resource*="section_1909853916"] .default-content-wrapper h1 {
+    text-align: left;
   font-size: 2.8rem;
   font-weight: 400;
   color: #003d4c;
-  margin-bottom: 2rem;
 }
 
 /* Cards container (ul) */
@@ -658,6 +658,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: none !important;
+     border-radius: 0;
 }
 
 /* Card body */
