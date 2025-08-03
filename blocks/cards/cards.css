@@ -621,7 +621,7 @@
   background: #fff;
   color: #00303d;
 }
-/* Target specific section */
+/* Section wrapper */
 .section[data-aue-resource*="section_1909853916"] {
   padding: 2rem 1rem;
   background-color: #ffffff;
@@ -635,7 +635,7 @@
   margin-bottom: 2rem;
 }
 
-/* Card container (ul) */
+/* Cards container (ul) */
 .section[data-aue-resource*="section_1909853916"] .cards.block ul {
   display: flex;
   justify-content: space-between;
@@ -653,24 +653,22 @@
   max-width: 280px;
   height: 150px;
   box-sizing: border-box;
+  padding: 1rem;
   display: flex;
-  align-items: center;              /* center vertically */
-  justify-content: center;         /* center horizontally */
+  flex-direction: column;
+  justify-content: space-between;
   transition: none !important;
-  padding: 0 !important;           /* override any internal padding */
 }
 
-/* Inner container */
+/* Card body */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
-  text-align: center;
 }
 
-/* Label (top) */
+/* Label (top-left) */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body p {
   font-size: 0.85rem;
   font-weight: bold;
@@ -678,13 +676,15 @@
   text-transform: uppercase;
   color: #003d4c;
   margin: 0;
+  text-align: left;
   line-height: 1.2;
 }
 
-/* Value (bottom) */
+/* Value (bottom-right) */
 .section[data-aue-resource*="section_1909853916"] .cards-card-body h3 {
   font-size: 2rem;
   font-weight: 400;
   color: #003d4c;
-  margin: 0.5rem 0 0 0;
+  margin: 0;
+  text-align: right;
 }
