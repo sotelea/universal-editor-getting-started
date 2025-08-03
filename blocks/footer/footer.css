@@ -1,55 +1,64 @@
-/* FOOTER BASE STYLES */
+/* FOOTER BASE */
 .footer-wrapper {
   background-color: #004d5c;
   color: #ffffff;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  padding: 40px 0;
+  font-size: 0.95rem;
+  padding: 60px 40px;
 }
 
 .footer .section.highlight {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 40px;
 }
 
+/* GRID LAYOUT */
 .footer .default-content-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  padding: 0;
+  grid-template-columns: 360px repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
 }
 
-/* FOOTER ADDRESS SECTION (1st column) */
-.footer .default-content-wrapper p:not(.button-container) {
+/* COLUMN 1 - Address block with logo and icon */
+.footer .default-content-wrapper > div:first-child {
+  background-color: #02434f;
+  background-image: url('/path/to/your/pattern.svg'); /* Optional pattern image */
+  background-repeat: repeat;
+  padding: 30px 30px 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer .default-content-wrapper > div:first-child img {
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.footer .default-content-wrapper > div:first-child p {
   margin: 0;
-  color: #fff;
-  font-weight: 400;
+  line-height: 1.6;
 }
 
-.footer .default-content-wrapper .button-container {
-  margin-top: 10px;
+.footer .default-content-wrapper > div:first-child svg,
+.footer .default-content-wrapper > div:first-child .icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 1rem;
 }
 
-.footer .default-content-wrapper .button-container .button {
-  color: #00b0ca;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0;
-  background: none;
-  font-size: 0.95rem;
-}
-
-/* HEADINGS INSIDE FOOTER */
+/* COLUMN TITLES (h5) */
 .footer .default-content-wrapper h5 {
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: bold;
-  margin: 2rem 0 0.5rem;
+  color: #a3c6cc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-/* LIST STYLES */
+/* LISTS */
 .footer .default-content-wrapper ul {
   list-style: none;
   padding: 0;
@@ -57,43 +66,42 @@
 }
 
 .footer .default-content-wrapper ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .footer .default-content-wrapper ul li a {
-  color: #00b0ca;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .footer .default-content-wrapper ul li a:hover {
   text-decoration: underline;
 }
 
-/* FOOTER ABOUT PARAGRAPH (last column) */
+/* ABOUT PARAGRAPH */
 .footer .default-content-wrapper h5 + p {
-  margin-top: 0.5rem;
-  color: #fff;
-  font-size: 0.9rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-top: 0;
+  line-height: 1.6;
+  max-width: 320px;
 }
 
-/* REMOVE EMPTY PARAGRAPH SPACING */
-.footer .default-content-wrapper p:empty {
-  display: none;
-}
-
-/* RESPONSIVE BEHAVIOR */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .footer .default-content-wrapper {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer .default-content-wrapper > div:first-child {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 600px) {
   .footer .default-content-wrapper {
     grid-template-columns: 1fr;
-  }
-  .footer-wrapper {
-    padding: 30px 20px;
   }
 }
