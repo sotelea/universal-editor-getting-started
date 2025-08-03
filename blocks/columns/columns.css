@@ -104,3 +104,55 @@
 .columns.block.columns-3-cols > div > div:hover {
   background: #054e5a;
 }
+
+/* 2-column layout styling */
+.columns-wrapper .columns.block.columns-2-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.columns-wrapper .columns.block.columns-2-cols > div {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+/* Left content column styling */
+.columns.block.columns-2-cols h1 {
+  font-size: 2.5rem;
+  color: #004b54;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.columns.block.columns-2-cols .button-container {
+  margin-top: 2rem;
+}
+
+.columns.block.columns-2-cols .button-container .button {
+  background: linear-gradient(to right, #007e8a, #003e51);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.columns.block.columns-2-cols .button-container .button:hover {
+  background: linear-gradient(to right, #005e66, #002e3a);
+}
+
+/* Right image column styling */
+.columns.block.columns-2-cols .columns-img-col picture,
+.columns.block.columns-2-cols .columns-img-col img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
