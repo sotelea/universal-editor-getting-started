@@ -191,63 +191,51 @@
   margin: 0;
   text-align: left;
 }
-/* Additional style to enhance the first card layout inside section_450155588 */
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul {
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+/* Target default-content-wrapper that appears before the .cards block */
+.cards-wrapper > .default-content-wrapper {
+  text-align: left;
+  padding: 2rem 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
-/* First card spans both image and text */
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0;
-  height: 400px;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: transparent;
-  box-shadow: none;
+/* Align heading */
+.cards-wrapper > .default-content-wrapper h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #00303d;
+  margin-bottom: 1rem;
 }
 
-/* Left column: image fills full height */
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image {
-  position: relative;
-  height: 100%;
+/* Align paragraph */
+.cards-wrapper > .default-content-wrapper p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Align button (assuming it's inside a <p>) */
+.cards-wrapper > .default-content-wrapper p.button-container,
+.cards-wrapper > .default-content-wrapper p > a.button {
+  text-align: left;
+  display: inline-block;
 }
 
-/* Right column: text area with padding */
-.cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body {
-  padding: 40px;
-  background: white;
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Button styling similar to image */
+.cards-wrapper a.button.secondary {
+  padding: 12px 24px;
+  border: 1px solid #004b55;
+  color: #004b55;
+  font-weight: 700;
+  background: transparent;
+  border-radius: 6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Optional: limit text width on large screens */
-@media (min-width: 1024px) {
-  .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-body {
-    max-width: 90%;
-  }
-}
-
-/* Responsive stacking for small screens */
-@media (max-width: 767px) {
-  .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image,
-  .cards-wrapper .cards.block[data-aue-resource*="section_450155588"] > ul > li:first-child .cards-card-image img {
-    height: 200px;
-  }
-}
-
+.cards-wrapper a.button.secondary:hover {
+  background-color: #004b55;
+  color: white;
+} 
