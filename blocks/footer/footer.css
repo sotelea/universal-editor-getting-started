@@ -15,7 +15,7 @@ footer .columns-wrapper {
 footer .columns.block.columns-4-cols > div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   color: #ffffff;
   min-width: 200px;
   max-width: 280px;
@@ -26,43 +26,36 @@ footer .columns.block.columns-4-cols > div:first-child {
   background-image: url('pattern-bg.png');
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
-  padding: 30px 25px;
+  border-radius: 30px;
+  padding: 40px 30px;
   flex-shrink: 0;
-  width: 280px;
+  width: 300px;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-footer .columns.block.columns-4-cols > div p,
-footer .columns.block.columns-4-cols > div ul,
-footer .columns.block.columns-4-cols > div h5 {
-  margin: 0;
+footer .columns.block.columns-4-cols > div:first-child p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+footer .columns.block.columns-4-cols > div:first-child svg,
+footer .columns.block.columns-4-cols > div:first-child .icon {
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 footer .columns.block.columns-4-cols p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-footer .columns.block.columns-4-cols .button-container a.button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #007791;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-footer .columns.block.columns-4-cols .button-container a.button:hover {
-  background-color: #0095b6;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
 }
 
 footer .columns.block.columns-4-cols h5 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #a4c0c4;
 }
 
 footer .columns.block.columns-4-cols ul {
@@ -72,17 +65,25 @@ footer .columns.block.columns-4-cols ul {
 }
 
 footer .columns.block.columns-4-cols ul li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 footer .columns.block.columns-4-cols ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 footer .columns.block.columns-4-cols ul li a:hover {
   text-decoration: underline;
+}
+
+footer .columns.block.columns-4-cols > div:last-child p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -97,3 +98,5 @@ footer .columns.block.columns-4-cols ul li a:hover {
 
   footer .columns.block.columns-4-cols > div:first-child {
     width: 100%;
+  }
+}
