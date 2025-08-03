@@ -504,116 +504,120 @@
     grid-template-columns: 1fr;
   }
 }
-/* Card container layout updates */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 0;
-  margin: 2rem 0;
-  list-style: none;
+/* Main section styling */
+.section[data-aue-resource*="section_1893523958"] {
+  background-color: #004452;
+  padding: 4rem 1rem;
+  color: #fff;
 }
 
-/* General card styling */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li {
-  background-color: #00414b;
-  padding: 2rem;
-  flex: 1 1 300px;
-  border-radius: 10px;
+/* Title styling */
+.section[data-aue-resource*="section_1893523958"] .default-content-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
   color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* Cards layout */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+}
+
+/* Individual card */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li {
+  background-color: #005e6a;
+  padding: 2rem;
+  border-radius: 16px;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-/* Title text white */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li h3 {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Category / tag text */
+/* Category label (e.g. INVESTORS or QUARTERLY RELEASE) */
 .section[data-aue-resource*="section_1893523958"] .cards-wrapper li .category {
   font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #b3d9dd;
+  letter-spacing: 0.05em;
+  color: #b3d4db;
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
-/* Description text */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li p {
-  color: #cbe7ea;
-  font-size: 0.9rem;
+/* Headline */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-/* 'Read the full report' button inside card 1 */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button {
+/* Description */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #ffffff;
-  text-decoration: none;
+}
+
+/* Date rectangle for event cards */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box {
+  border: 1px solid #f2b343;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f2b343;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box span {
+  display: block;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Card link / button inside */
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  color: #fff;
   font-weight: 500;
-  font-size: 0.9rem;
+  text-decoration: none;
   margin-top: auto;
 }
 
-/* Arrow style (you can use pseudo-element if icon not used) */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button::before {
-  content: '→';
-  display: inline-block;
-  margin-right: 0.25rem;
+.section[data-aue-resource*="section_1893523958"] .cards-wrapper li a.button::after {
+  content: "→";
+  font-size: 1.2rem;
 }
 
-/* Boxed date block for card 2 and 3 */
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box {
-  border: 1px solid #f2b343;
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  display: inline-block;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box .day {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f2b343;
-  line-height: 1.2;
-}
-
-.section[data-aue-resource*="section_1893523958"] .cards-wrapper li .date-box .month-year {
-  font-size: 0.75rem;
-  color: #ffffff;
-  margin-top: 0.25rem;
-}
-
-/* Bottom button center aligned */
-.section[data-aue-resource*="section_1893523958"] .button-container {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/* Bottom link style */
+/* CTA button at bottom */
 .section[data-aue-resource*="section_1893523958"] .button-container a.button {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  text-decoration: none;
+  display: inline-block;
+  margin-top: 3rem;
+  border: 1px solid #fff;
+  color: #fff;
   padding: 0.75rem 1.5rem;
+  background: transparent;
   font-size: 0.9rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 600;
-  display: inline-block;
-  background: transparent;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
 .section[data-aue-resource*="section_1893523958"] .button-container a.button:hover {
-  background-color: #ffffff;
+  background: #fff;
   color: #00303d;
 }
