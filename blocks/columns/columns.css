@@ -1,8 +1,12 @@
 .columns-wrapper{
-    margin-top: -220px; /* pull it up over the banner */
-  padding-top: 80px;
     padding-left: 30px;
     padding-right: 30px;
+}
+.columns.block.columns-3-cols {
+  position: relative;
+  z-index: 2;
+  margin-top: -220px;  /* Pull the cards up onto the banner */
+  padding-top: 80px;   /* Distance from top of the banner */
 }
 
 /* === 3 Column Flex Layout === */
