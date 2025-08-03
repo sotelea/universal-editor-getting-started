@@ -191,3 +191,49 @@
   margin: 0;
   text-align: left;
 }
+/* ---------------- FIX ALIGNMENT FOR TITLE AND PARAGRAPH ONLY ---------------- */
+
+/* Ensure text in the default-content-wrapper (title & button container) is left aligned */
+.cards-container > .default-content-wrapper {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* Make sure the title inside the wrapper has correct styling */
+.cards-container > .default-content-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #004b55;
+  margin-bottom: 16px;
+}
+
+/* Style the paragraph containing the button */
+.cards-container > .default-content-wrapper p.button-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* Ensure the button looks like in the screenshot */
+.cards-container .button.secondary {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #004b55;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #004b55;
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cards-container .button.secondary:hover {
+  background-color: #004b55;
+  color: #fff;
+}
+
