@@ -23,7 +23,7 @@
 /* Each card */
 .columns.block.columns-3-cols > div > div {
   flex: 1;
-  height: 320px; /* Adjusted to match visual */
+ 
   padding: 24px;
   background-color: #ddb178; /* Light brown background */
   text-align: center;
