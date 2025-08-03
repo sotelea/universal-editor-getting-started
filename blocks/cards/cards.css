@@ -1,10 +1,10 @@
-.cards {
+.cards.block {
   background-color: #004b55;
   padding: 60px 20px;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.cards > ul {
+.cards.block > ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
@@ -14,7 +14,7 @@
   gap: 32px;
 }
 
-.cards > ul > li {
+.cards.block > ul > li {
   background-color: #fff;
   border-radius: 16px;
   display: flex;
@@ -22,20 +22,19 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
 }
 
-.cards > ul > li:hover {
+.cards.block > ul > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.cards .cards-card-image {
+.cards.block .cards-card-image {
   line-height: 0;
   flex-shrink: 0;
 }
 
-.cards > ul > li img {
+.cards.block .cards-card-image img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
@@ -43,14 +42,14 @@
   display: block;
 }
 
-.cards .cards-card-body {
+.cards.block .cards-card-body {
   padding: 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.cards .cards-card-body h3 {
+.cards.block .cards-card-body h3 {
   margin-top: 0;
   margin-bottom: 12px;
   font-size: 1.5rem;
@@ -58,14 +57,14 @@
   font-weight: 600;
 }
 
-.cards .cards-card-body p {
+.cards.block .cards-card-body p {
   font-size: 1rem;
   color: #333;
   margin-bottom: auto;
   line-height: 1.5;
 }
 
-.cards .cards-card-body a {
+.cards.block .cards-card-body a {
   display: inline-flex;
   align-items: center;
   margin-top: 16px;
@@ -75,17 +74,17 @@
   font-size: 0.95rem;
 }
 
-.cards .cards-card-body a::before {
+.cards.block .cards-card-body a::before {
   content: '→';
   margin-right: 6px;
   font-size: 1rem;
   transition: transform 0.2s ease;
 }
 
-.cards .cards-card-body a:hover {
+.cards.block .cards-card-body a:hover {
   text-decoration: underline;
 }
 
-.cards .cards-card-body a:hover::before {
+.cards.block .cards-card-body a:hover::before {
   transform: translateX(2px);
 }
