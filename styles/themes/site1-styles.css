@@ -12,8 +12,8 @@
 
 :root {
   /* colors */
- 
-  --light-color: gray;
+  --background-color: #f4fbfe;
+  --light-color: white;
   --dark-color: #505050;
   --text-color: white;
   --link-color: teal;
@@ -37,7 +37,13 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 120px;
+  --nav-background-color: white;
+  --nav-ul-font-color: black;
+  --nav-ul-hover-background-color: #00537a;
+  --nav-ul-hover-font-color: white;
+  --nav-submenu-item-font-color: #202020;
+  --nav-submenu-item-hover-font-color: white;
 
   /* columns */
   --column-border-radius: 0px;

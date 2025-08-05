@@ -10,6 +10,8 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
+  toClassName
 } from './aem.js';
 
 /**
@@ -90,7 +92,7 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
- // loadSiteCss();
+  loadSiteCss();
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
@@ -148,11 +150,12 @@ async function loadPage() {
 async function loadSiteCss() {
   try {
   loadCSS(`${window.hlx.codeBasePath}/styles/base-styles.css`);
-  const themes = ["site1", "site2", "default"];
-  const randomIndex = Math.floor(Math.random() * themes.length);
-  // const theme = toClassName(getMetadata("theme"));
+  // const themes = ["site1", "site2", "default"];
+  // const randomIndex = Math.floor(Math.random() * themes.length);
+  const theme = toClassName(getMetadata("theme"));
   // for a POC, use a random site theme
-  const theme = themes[randomIndex];
+  //const theme = themes[randomIndex];
+  console.warn(`the selected theme is ${theme}`);
   switch (theme) {
     case "site1":
       loadCSS(`${window.hlx.codeBasePath}/styles/themes/site1-styles.css`);

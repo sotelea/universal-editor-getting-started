@@ -16,7 +16,7 @@
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
+  --link-color: white;
   --link-hover-color: #1d3ecf;
 
   /* fonts */
@@ -36,9 +36,15 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav height */
-  --nav-height: 64px;
-
+  /* navigation height */
+  --nav-height: 96px;
+  --nav-background-color: #054e5a;
+  --nav-ul-font-color: white;
+  --nav-ul-hover-background-color: transparent;
+  --nav-ul-hover-font-color: orange;
+  --nav-submenu-item-font-color: #202020;
+  --nav-submenu-item-hover-font-color: #1072b9;
+  
   /* columns */
   --column-border-radius: 20px;
   --column-background-color: #d2a66c;
