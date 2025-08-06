@@ -150,13 +150,6 @@ async function loadPage() {
 async function loadSiteCss() {
   try {
     loadCSS(`${window.hlx.codeBasePath}/styles/base-styles.css`);
-    // const themes = ["site1", "site2", "default"];
-    // const randomIndex = Math.floor(Math.random() * themes.length);
-    // const theme = toClassName(getMetadata("theme"));
-    // for a POC, use a random site theme
-    //const theme = themes[randomIndex];
-    // console.warn(`the selected theme is ${theme}`);
-
     const themeFromUrl = checkSite();
     console.warn(`the selected theme is ${themeFromUrl}`);
     switch (themeFromUrl) {

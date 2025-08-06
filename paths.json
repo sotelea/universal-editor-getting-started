@@ -1,10 +1,16 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
+    "/content/aem-boilerplate/:/atlascopco",
     "/content/aem-boilerplate/configuration:/.helix/config.json",
-    "/content/aem-boilerplate/metadata:/metadata.json"
+    "/content/aem-boilerplate/metadata:/metadata.json",
+    "/content/agre-aem-boilerplate/:/agre",
+    "/content/ceccato-aem-boilerplate/:/ceccato",
+    "/content/compresseurs-mauguiere-aem-boilerplate/:compresseurs-mauguiere"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/aem-boilerplate/",
+    "/content/agre-aem-boilerplate/",
+    "/content/ceccato-aem-boilerplate/",
+    "/content/compresseurs-mauguiere-aem-boilerplate/"
   ]
 }
