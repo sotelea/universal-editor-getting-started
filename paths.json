@@ -3,9 +3,9 @@
     "/content/aem-boilerplate/:/",
     "/content/aem-boilerplate/configuration:/.helix/config.json",
     "/content/aem-boilerplate/metadata:/metadata.json",
-    "/content/agre-aem-boilerplate/:/agre",
-    "/content/ceccato-aem-boilerplate/:/ceccato",
-    "/content/compresseurs-mauguiere-aem-boilerplate/:compresseurs-mauguiere"
+    "/content/agre-aem-boilerplate/:/agre/",
+    "/content/ceccato-aem-boilerplate/:/ceccato/",
+    "/content/compresseurs-mauguiere-aem-boilerplate/:/compresseurs-mauguiere/"
   ],
   "includes": [
     "/content/aem-boilerplate/",
