@@ -161,10 +161,16 @@ async function loadSiteCss() {
     console.warn(`the selected theme is ${themeFromUrl}`);
     switch (themeFromUrl) {
       case "atlascopco":
-        loadCSS(`${window.hlx.codeBasePath}/styles/themes/site1-styles.css`);
+        loadCSS(`${window.hlx.codeBasePath}/styles/themes/atlascopco-styles.css`);
         break;
       case "agre":
-        loadCSS(`${window.hlx.codeBasePath}/styles/themes/site2-styles.css`);
+        loadCSS(`${window.hlx.codeBasePath}/styles/themes/agre-styles.css`);
+        break;
+      case "ceccato":
+        loadCSS(`${window.hlx.codeBasePath}/styles/themes/ceccato-styles.css`);
+        break;
+      case "compresseurs-mauguiere":
+        loadCSS(`${window.hlx.codeBasePath}/styles/themes/compresseurs-mauguiere-styles.css`);
         break;
       default:
         break;
@@ -178,7 +184,15 @@ function checkSite() {
   if (window.location.href.indexOf('agre') > -1) {
     return 'agre';
   } else {
-    return 'atlascopco'
+    if (window.location.href.indexOf('ceccato') > -1) {
+      return 'ceccato';
+    } else {
+      if (window.location.href.indexOf('compresseurs-mauguiere') > -1) {
+        return 'compresseurs-mauguiere';
+      } else {
+        return 'atlascopco'
+      }
+    }
   }
 }
 
