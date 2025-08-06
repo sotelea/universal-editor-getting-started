@@ -149,7 +149,7 @@ async function loadPage() {
 
 async function loadSiteCss() {
   try {
-    // loadCSS(`${window.hlx.codeBasePath}/styles/base-styles.css`);
+    loadCSS(`${window.hlx.codeBasePath}/styles/base-styles.css`);
     // const themes = ["site1", "site2", "default"];
     // const randomIndex = Math.floor(Math.random() * themes.length);
     // const theme = toClassName(getMetadata("theme"));
