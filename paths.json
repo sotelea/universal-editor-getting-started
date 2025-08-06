@@ -5,7 +5,8 @@
     "/content/aem-boilerplate/metadata:/metadata.json",
     "/content/agre-aem-boilerplate/:/agre/",
     "/content/ceccato-aem-boilerplate/:/ceccato/",
-    "/content/compresseurs-mauguiere-aem-boilerplate/:/compresseurs-mauguiere/"
+    "/content/compresseurs-mauguiere-aem-boilerplate/:/compresseurs-mauguiere/",
+    "/content/aem-boilerplate/compresseurs-mauguiere-aem-boilerplate:/ceccato-vanity/"
   ],
   "includes": [
     "/content/aem-boilerplate/",
