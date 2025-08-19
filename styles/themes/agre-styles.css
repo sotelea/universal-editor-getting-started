@@ -64,3 +64,17 @@
 }
 
 /* hero banner midsouthmach */
+
+/* image grid */
+.columns .default-content-wrapper div {
+  display: inline-flex; 
+  padding: 20px
+}
+
+.columns.section .default-content-wrapper {
+  max-width: fit-content;
+}
+.columns.section {
+  background-color: #f2ceae;
+}
+/* end image grid */
